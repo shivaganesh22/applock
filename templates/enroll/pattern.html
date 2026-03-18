@@ -1,0 +1,206 @@
+{% extends "base.html" %}
+{% block title %}Enroll Pattern{% endblock %}
+
+{% block content %}
+<section class="min-h-[calc(100vh-72px)] flex items-center justify-center px-6 py-12">
+    <div class="w-full max-w-md">
+        <div class="glass-card rounded-2xl p-8">
+            <div class="text-center mb-6">
+                <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-cyan-500 to-teal-400 rounded-2xl flex items-center justify-center text-2xl">
+                    <i class="fas fa-th"></i>
+                </div>
+                <h2 class="text-2xl font-bold">Set Your Pattern</h2>
+                <p class="text-gray-500 text-sm mt-1">Connect at least 4 dots</p>
+            </div>
+
+            <div id="phase-indicator" class="text-center mb-4">
+                <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-400 text-xs font-semibold">Step 1: Draw Pattern</span>
+            </div>
+
+            <!-- Pattern Grid -->
+            <div class="flex justify-center">
+                <div class="pattern-grid">
+                    <canvas id="pattern-canvas" class="pattern-canvas" width="280" height="280"></canvas>
+                    <div class="pattern-dots">
+                        {% for i in range(9) %}
+                        <div class="flex items-center justify-center">
+                            <div class="pattern-dot-inner" data-index="{{ i }}"></div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-3 mt-6">
+                <button id="clear-btn" onclick="clearPattern()" class="flex-1 px-4 py-2.5 bg-white/[0.05] border border-white/[0.08] rounded-lg text-sm font-medium text-gray-300 hover:bg-white/[0.08] transition-all">
+                    <i class="fas fa-redo mr-1"></i> Clear
+                </button>
+                <button id="confirm-btn" onclick="confirmPattern()" class="flex-1 px-4 py-2.5 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-lg text-sm font-semibold text-white hover:opacity-90 transition-all" disabled>
+                    <i class="fas fa-check mr-1"></i> Confirm
+                </button>
+            </div>
+
+            <div class="text-center mt-6">
+                <a href="{{ url_for('enroll.hub') }}" class="text-sm text-gray-500 hover:text-gray-300"><i class="fas fa-arrow-left mr-1"></i> Back</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const canvas = document.getElementById('pattern-canvas');
+const ctx = canvas.getContext('2d');
+let pattern = [];
+let confirmPatternArr = [];
+let phase = 'draw';
+let isDrawing = false;
+
+// Dot positions (3x3 grid, centered in cells)
+const dots = [];
+for (let row = 0; row < 3; row++) {
+    for (let col = 0; col < 3; col++) {
+        dots.push({
+            x: col * 93.33 + 46.67,
+            y: row * 93.33 + 46.67,
+            index: row * 3 + col
+        });
+    }
+}
+
+function getMousePos(e) {
+    const rect = canvas.getBoundingClientRect();
+    const scaleX = canvas.width / rect.width;
+    const scaleY = canvas.height / rect.height;
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+    return {
+        x: (clientX - rect.left) * scaleX,
+        y: (clientY - rect.top) * scaleY
+    };
+}
+
+function getNearestDot(pos) {
+    for (const dot of dots) {
+        const dist = Math.sqrt((pos.x - dot.x) ** 2 + (pos.y - dot.y) ** 2);
+        if (dist < 35) return dot;
+    }
+    return null;
+}
+
+function drawLines(currentPattern, mousePos) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    if (currentPattern.length === 0) return;
+
+    ctx.strokeStyle = '#06b6d4';
+    ctx.lineWidth = 3;
+    ctx.lineCap = 'round';
+    ctx.shadowBlur = 10;
+    ctx.shadowColor = '#06b6d4';
+
+    ctx.beginPath();
+    const first = dots[currentPattern[0]];
+    ctx.moveTo(first.x, first.y);
+    for (let i = 1; i < currentPattern.length; i++) {
+        const d = dots[currentPattern[i]];
+        ctx.lineTo(d.x, d.y);
+    }
+    if (mousePos && isDrawing) {
+        ctx.lineTo(mousePos.x, mousePos.y);
+    }
+    ctx.stroke();
+    ctx.shadowBlur = 0;
+}
+
+function updateDotStyles(currentPattern) {
+    document.querySelectorAll('.pattern-dot-inner').forEach((dot, i) => {
+        dot.classList.toggle('active', currentPattern.includes(i));
+    });
+}
+
+canvas.addEventListener('mousedown', (e) => startDraw(e));
+canvas.addEventListener('mousemove', (e) => moveDraw(e));
+canvas.addEventListener('mouseup', () => endDraw());
+canvas.addEventListener('touchstart', (e) => { e.preventDefault(); startDraw(e); });
+canvas.addEventListener('touchmove', (e) => { e.preventDefault(); moveDraw(e); });
+canvas.addEventListener('touchend', () => endDraw());
+
+function startDraw(e) {
+    isDrawing = true;
+    const pos = getMousePos(e);
+    const dot = getNearestDot(pos);
+    const currentPattern = phase === 'draw' ? pattern : confirmPatternArr;
+    if (dot && !currentPattern.includes(dot.index)) {
+        currentPattern.push(dot.index);
+        updateDotStyles(currentPattern);
+        drawLines(currentPattern, pos);
+    }
+}
+
+function moveDraw(e) {
+    if (!isDrawing) return;
+    const pos = getMousePos(e);
+    const dot = getNearestDot(pos);
+    const currentPattern = phase === 'draw' ? pattern : confirmPatternArr;
+    if (dot && !currentPattern.includes(dot.index)) {
+        currentPattern.push(dot.index);
+        updateDotStyles(currentPattern);
+    }
+    drawLines(currentPattern, pos);
+}
+
+function endDraw() {
+    isDrawing = false;
+    const currentPattern = phase === 'draw' ? pattern : confirmPatternArr;
+    drawLines(currentPattern, null);
+    document.getElementById('confirm-btn').disabled = currentPattern.length < 4;
+}
+
+function clearPattern() {
+    if (phase === 'draw') {
+        pattern = [];
+    } else {
+        confirmPatternArr = [];
+    }
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    updateDotStyles([]);
+    document.getElementById('confirm-btn').disabled = true;
+}
+
+function confirmPattern() {
+    if (phase === 'draw') {
+        if (pattern.length < 4) {
+            showToast('Connect at least 4 dots.', 'error');
+            return;
+        }
+        phase = 'confirm';
+        document.getElementById('phase-indicator').innerHTML =
+            '<span class="px-3 py-1 rounded-full bg-amber-500/15 text-amber-400 text-xs font-semibold">Step 2: Confirm Pattern</span>';
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        updateDotStyles([]);
+        document.getElementById('confirm-btn').disabled = true;
+        showToast('Now draw the same pattern again to confirm.', 'info');
+    } else {
+        // Submit
+        fetch('{{ url_for("enroll.pattern") }}', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ pattern: pattern, confirm_pattern: confirmPatternArr })
+        })
+        .then(r => r.json())
+        .then(data => {
+            if (data.success) {
+                showToast(data.message, 'success');
+                setTimeout(() => window.location.href = '{{ url_for("enroll.hub") }}', 1500);
+            } else {
+                showToast(data.message, 'error');
+                confirmPatternArr = [];
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                updateDotStyles([]);
+            }
+        });
+    }
+}
+</script>
+{% endblock %}

@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% block title %}Gesture Unlock{% endblock %}
+
+{% block content %}
+<section class="max-w-2xl mx-auto px-6 py-10">
+    <div class="glass-card rounded-2xl p-8">
+        <div class="text-center mb-6">
+            <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-amber-500 to-yellow-400 rounded-2xl flex items-center justify-center text-2xl">
+                <i class="fas fa-hand-paper"></i>
+            </div>
+            <h2 class="text-2xl font-bold">Gesture Unlock</h2>
+            <p class="text-gray-500 text-sm mt-1">Show your enrolled hand gesture to the camera</p>
+            <span class="inline-flex items-center gap-1 mt-2 px-3 py-1 bg-accent-violet/15 border border-accent-violet/30 rounded-full text-xs font-bold text-accent-violet uppercase">
+                <i class="fas fa-brain"></i> Random Forest Verification
+            </span>
+        </div>
+
+        <div class="bg-white/[0.02] border border-white/[0.08] rounded-xl p-5 mb-6 text-sm text-gray-500">
+            <i class="fas fa-info-circle text-amber-400 mr-2"></i>
+            A camera window will open. Show your enrolled gesture — it will automatically verify. Press <kbd class="px-1.5 py-0.5 bg-white/10 rounded text-xs font-mono text-gray-300">Q</kbd> to cancel.
+        </div>
+
+        <!-- Start Button -->
+        <button id="verify-btn" onclick="verifyGesture()" class="w-full px-4 py-4 bg-gradient-to-r from-amber-500 to-yellow-400 rounded-xl text-base font-semibold text-dark-900 hover:opacity-90 transition-all hover:-translate-y-0.5 flex items-center justify-center gap-2">
+            <i class="fas fa-hand-paper"></i> Open Camera & Verify Gesture
+        </button>
+
+        <!-- Processing -->
+        <div id="processing-state" class="hidden mt-5 flex items-center justify-center gap-3 py-6">
+            <div class="w-8 h-8 border-3 border-amber-500/30 border-t-amber-500 rounded-full animate-spin"></div>
+            <span class="text-gray-400">Camera window is open — show your gesture...</span>
+        </div>
+
+        <!-- Success -->
+        <div id="success-state" class="hidden mt-5 flex flex-col items-center gap-3 py-6">
+            <div class="w-16 h-16 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full flex items-center justify-center text-3xl success-bounce">✓</div>
+            <p class="text-emerald-400 font-semibold text-lg">Gesture Verified!</p>
+            <div id="confidence" class="text-sm text-gray-500"></div>
+        </div>
+
+        <!-- Error -->
+        <div id="error-state" class="hidden mt-5 flex items-center justify-center gap-3 py-4 text-red-400">
+            <i class="fas fa-exclamation-circle text-xl"></i>
+            <span id="error-msg" class="text-sm"></span>
+        </div>
+
+        <div class="text-center mt-6">
+            <a href="{{ url_for('unlock.choose') }}" class="text-sm text-gray-500 hover:text-gray-300"><i class="fas fa-arrow-left mr-1"></i> Other methods</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+async function verifyGesture() {
+    const btn = document.getElementById('verify-btn');
+    btn.disabled = true;
+    btn.classList.add('hidden');
+    document.getElementById('processing-state').classList.remove('hidden');
+    document.getElementById('error-state').classList.add('hidden');
+
+    try {
+        const resp = await fetch('{{ url_for("unlock.gesture") }}', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' }
+        });
+        const data = await resp.json();
+        document.getElementById('processing-state').classList.add('hidden');
+
+        if (data.success) {
+            showToast(data.message, 'success');
+            document.getElementById('success-state').classList.remove('hidden');
+            if (data.confidence) {
+                document.getElementById('confidence').textContent = `Confidence: ${data.confidence}%`;
+            }
+            setTimeout(() => window.location.href = data.redirect, 2000);
+        } else {
+            showToast(data.message, 'error');
+            document.getElementById('error-state').classList.remove('hidden');
+            document.getElementById('error-msg').textContent = data.message;
+            btn.classList.remove('hidden');
+            btn.disabled = false;
+        }
+    } catch (err) {
+        document.getElementById('processing-state').classList.add('hidden');
+        btn.classList.remove('hidden');
+        btn.disabled = false;
+        showToast('Error: ' + err.message, 'error');
+    }
+}
+</script>
+{% endblock %}

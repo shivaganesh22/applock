@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Z-Lock{% endblock %} | ML Security</title>
+    <meta name="description" content="Advanced multi-factor authentication using Machine Learning - Face Recognition, Hand Gesture, Fingerprint, PIN & Pattern Lock">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: { 900: '#06060f', 800: '#0d0d1a', 700: '#141428' },
+                        accent: {
+                            violet: '#7c3aed',
+                            cyan: '#06b6d4',
+                            pink: '#ec4899',
+                            green: '#10b981',
+                            amber: '#f59e0b',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom Component CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    {% block extra_head %}{% endblock %}
+</head>
+<body class="bg-dark-900 text-gray-100 font-sans min-h-screen antialiased">
+    <!-- Animated Background -->
+    <div class="bg-animation"></div>
+    <div class="grid-overlay"></div>
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 h-[72px] bg-dark-900/85 backdrop-blur-xl border-b border-white/[0.08] flex items-center justify-between px-6 z-50">
+        <a href="{{ url_for('auth.index') }}" class="flex items-center gap-3 no-underline text-white font-bold text-xl group">
+            <div class="w-10 h-10 bg-gradient-to-br from-accent-violet to-accent-cyan rounded-xl flex items-center justify-center text-lg transition-transform group-hover:scale-110">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <span>Z-<span class="gradient-text">Lock</span></span>
+        </a>
+
+        <div class="flex items-center gap-2">
+            {% if current_user.is_authenticated %}
+                <a href="{{ url_for('auth.dashboard') }}" class="text-gray-400 hover:text-white px-4 py-2 rounded-lg hover:bg-white/5 text-sm font-medium transition-all">
+                    <i class="fas fa-th-large mr-1"></i> Dashboard
+                </a>
+                <a href="{{ url_for('enroll.hub') }}" class="text-gray-400 hover:text-white px-4 py-2 rounded-lg hover:bg-white/5 text-sm font-medium transition-all">
+                    <i class="fas fa-plus-circle mr-1"></i> Enroll
+                </a>
+                <a href="{{ url_for('auth.logout') }}" class="text-gray-400 hover:text-white px-4 py-2 rounded-lg hover:bg-white/5 text-sm font-medium transition-all">
+                    <i class="fas fa-sign-out-alt mr-1"></i> Logout
+                </a>
+            {% else %}
+                <a href="{{ url_for('auth.login') }}" class="text-gray-400 hover:text-white px-4 py-2 rounded-lg hover:bg-white/5 text-sm font-medium transition-all">
+                    Login
+                </a>
+                <a href="{{ url_for('auth.signup') }}" class="bg-gradient-to-r from-accent-violet to-accent-cyan text-white px-5 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-all hover:-translate-y-0.5">
+                    Sign Up
+                </a>
+            {% endif %}
+        </div>
+    </nav>
+
+    <!-- Toast Container -->
+    <div id="toast-container" class="fixed top-[84px] right-6 z-[10000] flex flex-col gap-2"></div>
+
+    <!-- Main Content -->
+    <main class="pt-[72px] min-h-screen">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Flash Messages as Toasts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    showToast('{{ message|e }}', '{{ category }}');
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
+        });
+
+        function showToast(message, type = 'info') {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            const colors = {
+                success: 'bg-emerald-500/15 border-emerald-500/30 text-emerald-300',
+                error: 'bg-red-500/15 border-red-500/30 text-red-300',
+                info: 'bg-cyan-500/15 border-cyan-500/30 text-cyan-300',
+                warning: 'bg-amber-500/15 border-amber-500/30 text-amber-300',
+            };
+            const icons = {
+                success: 'fa-check-circle',
+                error: 'fa-exclamation-circle',
+                info: 'fa-info-circle',
+                warning: 'fa-exclamation-triangle',
+            };
+
+            toast.className = `px-5 py-3.5 rounded-xl backdrop-blur-xl border text-sm font-medium flex items-center gap-3 min-w-[280px] max-w-[420px] cursor-pointer toast-anim-in ${colors[type] || colors.info}`;
+            toast.innerHTML = `<i class="fas ${icons[type] || icons.info}"></i><span>${message}</span>`;
+            toast.onclick = () => {
+                toast.classList.add('toast-anim-out');
+                setTimeout(() => toast.remove(), 400);
+            };
+            container.appendChild(toast);
+            setTimeout(() => {
+                if (toast.parentNode) {
+                    toast.classList.add('toast-anim-out');
+                    setTimeout(() => toast.remove(), 400);
+                }
+            }, 4000);
+        }
+    </script>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}Enroll Methods{% endblock %}
+
+{% block content %}
+<section class="max-w-4xl mx-auto px-6 py-10">
+    <div class="text-center mb-10">
+        <h1 class="text-3xl font-bold mb-2">
+            <span class="gradient-text">Security Methods</span>
+        </h1>
+        <p class="text-gray-500">Enroll one or more authentication methods to secure your account</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {% for method in methods %}
+        <div class="glass-card rounded-2xl p-6 method-card group relative" style="--card-color: {{ method.color }}">
+            {% if method.get('ml_badge') %}
+            <span class="absolute top-4 right-4 px-2.5 py-1 bg-accent-violet/15 border border-accent-violet/30 rounded-full text-[10px] font-bold text-accent-violet uppercase tracking-wider">
+                <i class="fas fa-brain mr-1"></i>ML
+            </span>
+            {% endif %}
+
+            <div class="w-14 h-14 rounded-xl flex items-center justify-center text-2xl mb-4 transition-transform group-hover:scale-110" style="background: {{ method.gradient }}">
+                <i class="fas {{ method.icon }} text-white"></i>
+            </div>
+
+            <h3 class="text-lg font-bold mb-1">{{ method.name }}</h3>
+            <p class="text-gray-500 text-sm mb-4 leading-relaxed">{{ method.description }}</p>
+
+            {% if method.enrolled %}
+            <div class="flex items-center gap-2 mb-3">
+                <i class="fas fa-check-circle text-emerald-400 text-sm"></i>
+                <span class="text-emerald-400 text-sm font-medium">Enrolled</span>
+            </div>
+            <div class="flex gap-2">
+                <a href="{{ url_for('enroll.' + method.type) }}" class="flex-1 px-4 py-2.5 bg-white/[0.05] border border-white/[0.08] rounded-lg text-sm font-medium text-gray-300 text-center hover:bg-white/[0.08] transition-all">
+                    <i class="fas fa-redo mr-1"></i> Re-enroll
+                </a>
+                <form method="POST" action="{{ url_for('enroll.remove_method', method_type=method.type) }}" class="flex-shrink-0">
+                    <button type="submit" class="px-4 py-2.5 bg-red-500/10 border border-red-500/20 rounded-lg text-sm font-medium text-red-400 hover:bg-red-500/20 transition-all" onclick="return confirm('Remove this method?')">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </form>
+            </div>
+            {% else %}
+            <a href="{{ url_for('enroll.' + method.type) }}" class="block w-full px-4 py-2.5 bg-gradient-to-r from-accent-violet to-accent-cyan rounded-lg text-sm font-semibold text-white text-center hover:opacity-90 transition-all hover:-translate-y-0.5">
+                <i class="fas fa-plus mr-1"></i> Enroll Now
+            </a>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="text-center mt-8">
+        <a href="{{ url_for('auth.dashboard') }}" class="text-sm text-gray-500 hover:text-gray-300 transition-all">
+            <i class="fas fa-arrow-left mr-1"></i> Back to Dashboard
+        </a>
+    </div>
+</section>
+{% endblock %}

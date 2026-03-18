@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+<section class="min-h-[calc(100vh-72px)] flex items-center justify-center px-6">
+    <div class="max-w-3xl text-center">
+        <!-- Hero -->
+        <h1 class="text-5xl md:text-7xl font-black leading-[1.1] tracking-tight mb-6">
+            Secure with
+            <span class="gradient-text">AI-Powered</span>
+            Authentication
+        </h1>
+        <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-xl mx-auto leading-relaxed">
+            Next-generation app lock using Machine Learning. Authenticate with your face, hand gesture, fingerprint, PIN, or pattern — all trained on <strong class="text-gray-300">your unique biometrics</strong>.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex justify-center gap-4 flex-wrap mb-16">
+            <a href="{{ url_for('auth.signup') }}" class="bg-gradient-to-r from-accent-violet to-accent-cyan text-white px-8 py-4 rounded-xl text-lg font-bold hover:opacity-90 transition-all hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(124,58,237,0.3)]">
+                <i class="fas fa-rocket mr-2"></i> Get Started
+            </a>
+            <a href="{{ url_for('auth.login') }}" class="bg-white/[0.03] border border-white/[0.08] text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-white/[0.06] transition-all hover:-translate-y-1">
+                <i class="fas fa-sign-in-alt mr-2"></i> Login
+            </a>
+        </div>
+
+        <!-- Feature Pills -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 max-w-2xl mx-auto">
+            <div class="bg-white/[0.03] border border-white/[0.08] rounded-xl p-4 text-center hover:-translate-y-1 transition-all group">
+                <div class="text-3xl mb-2 group-hover:scale-110 transition-transform">🔑</div>
+                <div class="text-xs text-gray-500 font-medium">PIN Code</div>
+            </div>
+            <div class="bg-white/[0.03] border border-white/[0.08] rounded-xl p-4 text-center hover:-translate-y-1 transition-all group">
+                <div class="text-3xl mb-2 group-hover:scale-110 transition-transform">🔷</div>
+                <div class="text-xs text-gray-500 font-medium">Pattern Lock</div>
+            </div>
+            <div class="bg-white/[0.03] border border-white/[0.08] rounded-xl p-4 text-center hover:-translate-y-1 transition-all group">
+                <div class="text-3xl mb-2 group-hover:scale-110 transition-transform">🤖</div>
+                <div class="text-xs text-gray-500 font-medium">Face ID <span class="text-[10px] text-violet-400 font-bold">ML</span></div>
+            </div>
+            <div class="bg-white/[0.03] border border-white/[0.08] rounded-xl p-4 text-center hover:-translate-y-1 transition-all group">
+                <div class="text-3xl mb-2 group-hover:scale-110 transition-transform">✋</div>
+                <div class="text-xs text-gray-500 font-medium">Gesture <span class="text-[10px] text-violet-400 font-bold">ML</span></div>
+            </div>
+            <div class="bg-white/[0.03] border border-white/[0.08] rounded-xl p-4 text-center hover:-translate-y-1 transition-all group">
+                <div class="text-3xl mb-2 group-hover:scale-110 transition-transform">👆</div>
+                <div class="text-xs text-gray-500 font-medium">Fingerprint</div>
+            </div>
+        </div>
+
+        <!-- Tech Stack Badge -->
+        <div class="mt-12 flex items-center justify-center gap-4 flex-wrap">
+            <span class="text-xs text-gray-600 font-medium uppercase tracking-widest">Powered by</span>
+            <div class="flex gap-3">
+                <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-gray-400 font-mono">MediaPipe</span>
+                <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-gray-400 font-mono">scikit-learn</span>
+                <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-gray-400 font-mono">OpenCV</span>
+                <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-gray-400 font-mono">Flask</span>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

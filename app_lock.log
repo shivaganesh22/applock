@@ -1,0 +1,1024 @@
+2026-03-17 10:52:04,309 - __main__ - INFO - Database initialized successfully.
+2026-03-17 10:52:04,309 - __main__ - INFO - Starting App Lock server...
+2026-03-17 10:52:04,359 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.105.30.208:5000
+2026-03-17 10:52:04,366 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-17 10:52:04,369 - werkzeug - INFO -  * Restarting with stat
+2026-03-17 10:52:05,074 - __main__ - INFO - Database initialized successfully.
+2026-03-17 10:52:05,074 - __main__ - INFO - Starting App Lock server...
+2026-03-17 10:52:05,092 - werkzeug - WARNING -  * Debugger is active!
+2026-03-17 10:52:05,099 - werkzeug - INFO -  * Debugger PIN: 112-238-025
+2026-03-17 10:52:42,681 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:52:42] "GET / HTTP/1.1" 200 -
+2026-03-17 10:52:42,845 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:52:42] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-03-17 10:52:44,290 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:52:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-17 10:53:26,452 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:53:26] "GET /signup HTTP/1.1" 200 -
+2026-03-17 10:53:26,507 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:53:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:53:44,400 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:53:44] "[32mPOST /signup HTTP/1.1[0m" 302 -
+2026-03-17 10:53:44,439 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:53:44] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 10:53:44,497 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:53:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:53:47,791 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:53:47] "GET /enroll/pin HTTP/1.1" 200 -
+2026-03-17 10:53:47,839 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:53:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:54:06,219 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:54:06] "[32mPOST /enroll/pin HTTP/1.1[0m" 302 -
+2026-03-17 10:54:06,238 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:54:06] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 10:54:06,299 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:54:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:54:11,557 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:54:11] "[32mPOST /enroll/remove/pin HTTP/1.1[0m" 302 -
+2026-03-17 10:54:11,573 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:54:11] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 10:54:11,633 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:54:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:54:12,495 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:54:12] "GET /enroll/pin HTTP/1.1" 200 -
+2026-03-17 10:54:12,553 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:54:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:54:21,193 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:54:21] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 10:54:21,286 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:54:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:54:23,371 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:54:23] "GET /enroll/pin HTTP/1.1" 200 -
+2026-03-17 10:54:23,416 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:54:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:54:32,909 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:54:32] "[32mPOST /enroll/pin HTTP/1.1[0m" 302 -
+2026-03-17 10:54:32,926 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:54:32] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 10:54:32,980 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:54:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:54:34,262 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:54:34] "GET /enroll/pattern HTTP/1.1" 200 -
+2026-03-17 10:54:34,330 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:54:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:54:43,745 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:54:43] "POST /enroll/pattern HTTP/1.1" 200 -
+2026-03-17 10:54:45,303 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:54:45] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 10:54:45,348 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:54:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:54:47,219 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:54:47] "GET /enroll/face HTTP/1.1" 200 -
+2026-03-17 10:54:47,265 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:54:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:55:14,219 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:55:14] "[35m[1mPOST /enroll/face/capture HTTP/1.1[0m" 500 -
+2026-03-17 10:55:24,564 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:55:24] "[35m[1mPOST /enroll/face/capture HTTP/1.1[0m" 500 -
+2026-03-17 10:55:25,835 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:55:25] "[35m[1mPOST /enroll/face/capture HTTP/1.1[0m" 500 -
+2026-03-17 10:55:26,853 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:55:26] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 10:55:26,908 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:55:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:55:29,175 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:55:29] "[35m[1mGET /enroll/gesture HTTP/1.1[0m" 500 -
+2026-03-17 10:55:29,251 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:55:29] "GET /enroll/gesture?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2026-03-17 10:55:29,275 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:55:29] "GET /enroll/gesture?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2026-03-17 10:55:29,335 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:55:29] "GET /enroll/gesture?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2026-03-17 10:55:29,360 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:55:29] "[36mGET /enroll/gesture?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2026-03-17 10:55:38,429 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:55:38] "GET /enroll/fingerprint HTTP/1.1" 200 -
+2026-03-17 10:55:38,471 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:55:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:55:40,695 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:55:40] "POST /enroll/fingerprint/register-options HTTP/1.1" 200 -
+2026-03-17 10:55:43,811 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:55:43] "POST /enroll/fingerprint/register-options HTTP/1.1" 200 -
+2026-03-17 10:55:44,431 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:55:44] "POST /enroll/fingerprint/register-options HTTP/1.1" 200 -
+2026-03-17 10:55:44,629 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:55:44] "POST /enroll/fingerprint/register-options HTTP/1.1" 200 -
+2026-03-17 10:55:44,812 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:55:44] "POST /enroll/fingerprint/register-options HTTP/1.1" 200 -
+2026-03-17 10:55:47,795 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:55:47] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 10:55:47,843 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:55:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:55:49,848 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:55:49] "GET /enroll/fingerprint HTTP/1.1" 200 -
+2026-03-17 10:55:49,883 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:55:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:55:55,099 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:55:55] "POST /enroll/fingerprint/register-options HTTP/1.1" 200 -
+2026-03-17 10:56:36,110 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:56:36] "POST /enroll/fingerprint/register-options HTTP/1.1" 200 -
+2026-03-17 10:56:36,781 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:56:36] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 10:56:36,830 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:56:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:56:41,205 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:56:41] "GET /dashboard HTTP/1.1" 200 -
+2026-03-17 10:56:41,260 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:56:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:56:54,202 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:56:54] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 10:56:54,262 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:56:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:56:57,643 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:56:57] "GET /dashboard HTTP/1.1" 200 -
+2026-03-17 10:56:57,699 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:56:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:57:04,452 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:57:04] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-17 10:57:04,473 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:57:04] "GET / HTTP/1.1" 200 -
+2026-03-17 10:57:04,536 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:57:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:57:06,210 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:57:06] "GET /login HTTP/1.1" 200 -
+2026-03-17 10:57:06,258 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:57:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:57:24,085 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:57:24] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-17 10:57:24,168 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:57:24] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-17 10:57:24,229 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:57:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:57:27,692 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:57:27] "GET /unlock/pin HTTP/1.1" 200 -
+2026-03-17 10:57:27,754 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:57:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:57:32,945 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:57:32] "POST /unlock/pin HTTP/1.1" 200 -
+2026-03-17 10:57:33,980 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:57:33] "GET /dashboard HTTP/1.1" 200 -
+2026-03-17 10:57:34,025 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:57:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:57:39,241 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:57:39] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-17 10:57:39,247 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:57:39] "GET / HTTP/1.1" 200 -
+2026-03-17 10:57:39,314 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:57:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:57:42,531 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:57:42] "GET /login HTTP/1.1" 200 -
+2026-03-17 10:57:42,603 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:57:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:57:56,169 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:57:56] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-17 10:57:56,187 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:57:56] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-17 10:57:56,244 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:57:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:57:57,583 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:57:57] "GET /unlock/pattern HTTP/1.1" 200 -
+2026-03-17 10:57:57,651 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:57:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:58:00,196 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:58:00] "POST /unlock/pattern HTTP/1.1" 200 -
+2026-03-17 10:58:01,235 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:58:01] "GET /dashboard HTTP/1.1" 200 -
+2026-03-17 10:58:01,289 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:58:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:58:25,164 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:58:25] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 10:58:25,230 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:58:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:58:29,754 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:58:29] "[35m[1mGET /enroll/gesture HTTP/1.1[0m" 500 -
+2026-03-17 10:58:29,815 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:58:29] "[36mGET /enroll/gesture?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:58:29,818 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:58:29] "[36mGET /enroll/gesture?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-03-17 10:58:29,894 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:58:29] "[36mGET /enroll/gesture?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2026-03-17 10:59:12,347 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:59:12] "GET /enroll/fingerprint HTTP/1.1" 200 -
+2026-03-17 10:59:12,405 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:59:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:59:17,328 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:59:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 10:59:17,338 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:59:17] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-17 10:59:21,841 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:59:21] "POST /enroll/fingerprint/register-options HTTP/1.1" 200 -
+2026-03-17 10:59:41,518 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 10:59:41] "POST /enroll/fingerprint/register-options HTTP/1.1" 200 -
+2026-03-17 11:00:21,787 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:00:21] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-17 11:00:21,819 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:00:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:00:21,839 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:00:21] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-17 11:00:25,493 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:00:25] "GET /enroll/face HTTP/1.1" 200 -
+2026-03-17 11:00:25,561 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:00:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:00:47,029 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:00:47] "[35m[1mPOST /enroll/face/capture HTTP/1.1[0m" 500 -
+2026-03-17 11:02:39,413 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:02:39] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 11:02:39,464 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:02:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:05:10,559 - __main__ - INFO - Database initialized successfully.
+2026-03-17 11:05:10,559 - __main__ - INFO - Starting App Lock server...
+2026-03-17 11:05:10,601 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.105.30.208:5000
+2026-03-17 11:05:10,602 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-17 11:05:10,603 - werkzeug - INFO -  * Restarting with stat
+2026-03-17 11:05:11,258 - __main__ - INFO - Database initialized successfully.
+2026-03-17 11:05:11,258 - __main__ - INFO - Starting App Lock server...
+2026-03-17 11:05:11,279 - werkzeug - WARNING -  * Debugger is active!
+2026-03-17 11:05:11,281 - werkzeug - INFO -  * Debugger PIN: 112-238-025
+2026-03-17 11:05:26,168 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:05:26] "GET /dashboard HTTP/1.1" 200 -
+2026-03-17 11:05:26,285 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:05:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:05:37,885 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:05:37] "GET /dashboard HTTP/1.1" 200 -
+2026-03-17 11:05:37,926 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:05:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:05:40,819 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:05:40] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 11:05:40,870 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:05:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:05:41,869 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:05:41] "GET /enroll/face HTTP/1.1" 200 -
+2026-03-17 11:05:41,908 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:05:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:06:07,726 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:06:07] "[35m[1mPOST /enroll/face/capture HTTP/1.1[0m" 500 -
+2026-03-17 11:06:16,697 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:06:16] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 11:06:16,741 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:06:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:06:27,101 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:06:27] "[35m[1mGET /enroll/gesture HTTP/1.1[0m" 500 -
+2026-03-17 11:06:27,152 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:06:27] "[36mGET /enroll/gesture?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-03-17 11:06:27,154 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:06:27] "[36mGET /enroll/gesture?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:06:27,247 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:06:27] "[36mGET /enroll/gesture?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2026-03-17 11:06:30,069 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:06:30] "[35m[1mGET /enroll/gesture HTTP/1.1[0m" 500 -
+2026-03-17 11:06:30,103 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:06:30] "[36mGET /enroll/gesture?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:06:30,103 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:06:30] "[36mGET /enroll/gesture?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-03-17 11:06:30,142 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:06:30] "[36mGET /enroll/gesture?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2026-03-17 11:06:30,159 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:06:30] "[36mGET /enroll/gesture?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2026-03-17 11:06:32,330 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:06:32] "GET /enroll/fingerprint HTTP/1.1" 200 -
+2026-03-17 11:06:32,380 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:06:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:06:33,958 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:06:33] "POST /enroll/fingerprint/register-options HTTP/1.1" 200 -
+2026-03-17 11:06:36,305 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:06:36] "POST /enroll/fingerprint/register-options HTTP/1.1" 200 -
+2026-03-17 11:06:36,555 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:06:36] "POST /enroll/fingerprint/register-options HTTP/1.1" 200 -
+2026-03-17 11:06:36,785 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:06:36] "POST /enroll/fingerprint/register-options HTTP/1.1" 200 -
+2026-03-17 11:06:37,005 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:06:37] "POST /enroll/fingerprint/register-options HTTP/1.1" 200 -
+2026-03-17 11:06:38,786 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:06:38] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 11:06:38,836 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:06:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:07:11,491 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:07:11] "[35m[1mGET /enroll/gesture HTTP/1.1[0m" 500 -
+2026-03-17 11:07:11,535 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:07:11] "[36mGET /enroll/gesture?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:07:11,538 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:07:11] "[36mGET /enroll/gesture?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-03-17 11:07:11,553 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:07:11] "[36mGET /enroll/gesture?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2026-03-17 11:07:50,945 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:07:50] "GET /enroll/fingerprint HTTP/1.1" 200 -
+2026-03-17 11:07:50,984 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:07:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:07:52,091 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:07:52] "POST /enroll/fingerprint/register-options HTTP/1.1" 200 -
+2026-03-17 11:08:15,255 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:08:15] "POST /enroll/fingerprint/register-options HTTP/1.1" 200 -
+2026-03-17 11:42:21,009 - __main__ - INFO - Database initialized successfully.
+2026-03-17 11:42:21,009 - __main__ - INFO - Starting App Lock server...
+2026-03-17 11:42:21,052 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.105.30.208:5000
+2026-03-17 11:42:21,052 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-17 11:42:21,054 - werkzeug - INFO -  * Restarting with stat
+2026-03-17 11:42:21,615 - __main__ - INFO - Database initialized successfully.
+2026-03-17 11:42:21,615 - __main__ - INFO - Starting App Lock server...
+2026-03-17 11:42:21,615 - werkzeug - WARNING -  * Debugger is active!
+2026-03-17 11:42:21,636 - werkzeug - INFO -  * Debugger PIN: 112-238-025
+2026-03-17 11:42:28,463 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:42:28] "POST /enroll/fingerprint/register-options HTTP/1.1" 200 -
+2026-03-17 11:42:29,263 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:42:29] "POST /enroll/fingerprint/register-options HTTP/1.1" 200 -
+2026-03-17 11:42:37,823 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:42:37] "[32mGET / HTTP/1.1[0m" 302 -
+2026-03-17 11:42:37,976 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:42:37] "GET /dashboard HTTP/1.1" 200 -
+2026-03-17 11:42:38,782 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:42:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:42:49,110 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:42:49] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 11:42:49,124 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:42:49] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 11:42:49,131 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:42:49] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 11:42:49,174 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:42:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:42:52,169 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:42:52] "GET /enroll/face HTTP/1.1" 200 -
+2026-03-17 11:42:52,202 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:42:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:43:25,122 - ml.face_recognition_ml - INFO - Face SVM trained for user 1: 20 samples, saved to C:\Users\rocks\Desktop\test\app_lock\trained_models\face_model_1.pkl
+2026-03-17 11:43:25,284 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:43:25] "POST /enroll/face/start HTTP/1.1" 200 -
+2026-03-17 11:43:28,324 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:43:28] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 11:43:28,369 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:43:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:43:31,539 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:43:31] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-17 11:43:31,565 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:43:31] "GET / HTTP/1.1" 200 -
+2026-03-17 11:43:31,608 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:43:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:43:33,040 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:43:33] "GET /login HTTP/1.1" 200 -
+2026-03-17 11:43:33,072 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:43:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:43:41,608 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:43:41] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-17 11:43:41,653 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:43:41] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-17 11:43:41,693 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:43:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:43:43,558 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:43:43] "GET /unlock/face HTTP/1.1" 200 -
+2026-03-17 11:43:43,599 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:43:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:43:51,213 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:43:51] "POST /unlock/face HTTP/1.1" 200 -
+2026-03-17 11:43:53,252 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:43:53] "GET /dashboard HTTP/1.1" 200 -
+2026-03-17 11:43:53,285 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:43:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:44:04,048 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:44:04] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 11:44:04,084 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:44:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:44:06,430 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:44:06] "GET /enroll/gesture HTTP/1.1" 200 -
+2026-03-17 11:44:06,463 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:44:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:45:01,295 - ml.gesture_recognition - INFO - Gesture RF trained for user 1: gesture=pointing, 30 samples
+2026-03-17 11:45:01,397 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:45:01] "POST /enroll/gesture/start HTTP/1.1" 200 -
+2026-03-17 11:45:04,440 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:45:04] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 11:45:04,484 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:45:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:45:05,744 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:45:05] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-17 11:45:05,750 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:45:05] "GET / HTTP/1.1" 200 -
+2026-03-17 11:45:05,789 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:45:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:45:07,065 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:45:07] "GET /login HTTP/1.1" 200 -
+2026-03-17 11:45:07,101 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:45:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:45:14,769 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:45:14] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-17 11:45:14,779 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:45:14] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-17 11:45:14,815 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:45:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:45:16,457 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:45:16] "GET /unlock/gesture HTTP/1.1" 200 -
+2026-03-17 11:45:16,492 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:45:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:45:28,800 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:45:28] "POST /unlock/gesture HTTP/1.1" 200 -
+2026-03-17 11:45:30,839 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:45:30] "GET /dashboard HTTP/1.1" 200 -
+2026-03-17 11:45:30,871 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:45:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:54:42,098 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rocks\\Desktop\\test\\app_lock\\ml\\gesture_recognition.py', reloading
+2026-03-17 11:54:42,609 - werkzeug - INFO -  * Restarting with stat
+2026-03-17 11:54:43,494 - __main__ - INFO - Database initialized successfully.
+2026-03-17 11:54:43,494 - __main__ - INFO - Starting App Lock server...
+2026-03-17 11:54:43,508 - werkzeug - WARNING -  * Debugger is active!
+2026-03-17 11:54:43,508 - werkzeug - INFO -  * Debugger PIN: 112-238-025
+2026-03-17 11:55:46,363 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rocks\\Desktop\\test\\app_lock\\routes\\enroll.py', reloading
+2026-03-17 11:55:46,488 - werkzeug - INFO -  * Restarting with stat
+2026-03-17 11:55:47,147 - __main__ - INFO - Database initialized successfully.
+2026-03-17 11:55:47,147 - __main__ - INFO - Starting App Lock server...
+2026-03-17 11:55:47,167 - werkzeug - WARNING -  * Debugger is active!
+2026-03-17 11:55:47,172 - werkzeug - INFO -  * Debugger PIN: 112-238-025
+2026-03-17 11:56:27,140 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:56:27] "GET /dashboard HTTP/1.1" 200 -
+2026-03-17 11:56:27,216 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:56:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:56:56,062 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:56:56] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 11:56:56,109 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:56:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:56:58,250 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:56:58] "GET /dashboard HTTP/1.1" 200 -
+2026-03-17 11:56:58,284 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:56:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:57:00,623 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:57:00] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 11:57:00,656 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:57:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:57:05,896 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:57:05] "[32mPOST /enroll/remove/gesture HTTP/1.1[0m" 302 -
+2026-03-17 11:57:05,909 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:57:05] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 11:57:05,942 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:57:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:57:16,550 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:57:16] "GET /enroll/gesture HTTP/1.1" 200 -
+2026-03-17 11:57:16,588 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:57:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:58:48,688 - ml.gesture_recognition - INFO - Gesture sequence enrolled for user 1: 3 gestures
+2026-03-17 11:58:48,732 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:58:48] "POST /enroll/gesture/start HTTP/1.1" 200 -
+2026-03-17 11:58:51,775 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:58:51] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 11:58:51,825 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:58:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:58:54,847 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:58:54] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-17 11:58:54,858 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:58:54] "GET / HTTP/1.1" 200 -
+2026-03-17 11:58:54,905 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:58:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:58:57,081 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:58:57] "GET /login HTTP/1.1" 200 -
+2026-03-17 11:58:57,116 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:58:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:59:08,323 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:59:08] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-17 11:59:08,354 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:59:08] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-17 11:59:08,396 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:59:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:59:10,477 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:59:10] "GET /unlock/gesture HTTP/1.1" 200 -
+2026-03-17 11:59:10,516 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:59:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 11:59:32,568 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:59:32] "POST /unlock/gesture HTTP/1.1" 200 -
+2026-03-17 11:59:34,608 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:59:34] "GET /dashboard HTTP/1.1" 200 -
+2026-03-17 11:59:34,647 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 11:59:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:05:18,180 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rocks\\Desktop\\test\\app_lock\\ml\\gesture_recognition.py', reloading
+2026-03-17 12:05:18,550 - werkzeug - INFO -  * Restarting with stat
+2026-03-17 12:05:19,416 - __main__ - INFO - Database initialized successfully.
+2026-03-17 12:05:19,416 - __main__ - INFO - Starting App Lock server...
+2026-03-17 12:05:19,450 - werkzeug - WARNING -  * Debugger is active!
+2026-03-17 12:05:19,458 - werkzeug - INFO -  * Debugger PIN: 112-238-025
+2026-03-17 12:06:22,458 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:06:22] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-17 12:06:22,478 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:06:22] "GET / HTTP/1.1" 200 -
+2026-03-17 12:06:22,560 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:06:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:06:23,951 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:06:23] "GET /login HTTP/1.1" 200 -
+2026-03-17 12:06:23,987 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:06:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:06:31,861 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:06:31] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-17 12:06:31,887 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:06:31] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-17 12:06:31,940 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:06:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:06:35,800 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:06:35] "GET /unlock/gesture HTTP/1.1" 200 -
+2026-03-17 12:06:35,839 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:06:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:06:58,601 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:06:58] "POST /unlock/gesture HTTP/1.1" 200 -
+2026-03-17 12:07:24,980 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:07:24] "POST /unlock/gesture HTTP/1.1" 200 -
+2026-03-17 12:07:38,171 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:07:38] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-17 12:07:38,208 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:07:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:07:39,314 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:07:39] "GET /unlock/gesture HTTP/1.1" 200 -
+2026-03-17 12:07:39,350 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:07:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:07:41,933 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:07:41] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-17 12:07:41,962 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:07:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:07:43,332 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:07:43] "GET /unlock/pattern HTTP/1.1" 200 -
+2026-03-17 12:07:43,366 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:07:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:07:45,272 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:07:45] "POST /unlock/pattern HTTP/1.1" 200 -
+2026-03-17 12:07:47,672 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:07:47] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-17 12:07:47,706 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:07:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:07:50,489 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:07:50] "GET /unlock/pin HTTP/1.1" 200 -
+2026-03-17 12:07:50,523 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:07:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:07:53,470 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:07:53] "POST /unlock/pin HTTP/1.1" 200 -
+2026-03-17 12:07:54,639 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:07:54] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-17 12:07:54,677 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:07:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:07:56,280 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:07:56] "GET /unlock/face HTTP/1.1" 200 -
+2026-03-17 12:07:56,315 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:07:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:08:07,112 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:08:07] "POST /unlock/face HTTP/1.1" 200 -
+2026-03-17 12:08:09,158 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:08:09] "GET /dashboard HTTP/1.1" 200 -
+2026-03-17 12:08:09,200 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:08:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:08:12,939 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:08:12] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 12:08:12,978 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:08:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:08:16,857 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:08:16] "[32mPOST /enroll/remove/gesture HTTP/1.1[0m" 302 -
+2026-03-17 12:08:16,872 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:08:16] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 12:08:16,914 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:08:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:08:18,450 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:08:18] "GET /enroll/gesture HTTP/1.1" 200 -
+2026-03-17 12:08:18,485 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:08:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:08:45,462 - ml.gesture_recognition - INFO - Gesture sequence enrolled for user 1: 3 gestures
+2026-03-17 12:08:45,492 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:08:45] "POST /enroll/gesture/start HTTP/1.1" 200 -
+2026-03-17 12:08:48,532 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:08:48] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 12:08:48,568 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:08:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:08:49,940 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:08:49] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-17 12:08:49,949 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:08:49] "GET / HTTP/1.1" 200 -
+2026-03-17 12:08:49,984 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:08:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:08:51,436 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:08:51] "GET /login HTTP/1.1" 200 -
+2026-03-17 12:08:51,471 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:08:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:09:02,903 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:09:02] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-17 12:09:02,908 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:09:02] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-17 12:09:02,952 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:09:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:09:04,815 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:09:04] "GET /unlock/gesture HTTP/1.1" 200 -
+2026-03-17 12:09:04,848 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:09:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:09:24,817 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:09:24] "POST /unlock/gesture HTTP/1.1" 200 -
+2026-03-17 12:09:50,236 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:09:50] "POST /unlock/gesture HTTP/1.1" 200 -
+2026-03-17 12:09:52,273 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:09:52] "GET /dashboard HTTP/1.1" 200 -
+2026-03-17 12:09:52,307 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:09:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:10:03,619 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:10:03] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-17 12:10:03,629 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:10:03] "GET / HTTP/1.1" 200 -
+2026-03-17 12:10:03,666 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:10:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:10:07,699 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:10:07] "GET /login HTTP/1.1" 200 -
+2026-03-17 12:10:07,744 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:10:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:10:15,367 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:10:15] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-17 12:10:15,367 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:10:15] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-17 12:10:15,418 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:10:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:10:16,769 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:10:16] "GET /unlock/gesture HTTP/1.1" 200 -
+2026-03-17 12:10:16,807 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:10:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:10:37,054 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:10:37] "POST /unlock/gesture HTTP/1.1" 200 -
+2026-03-17 12:10:39,087 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:10:39] "GET /dashboard HTTP/1.1" 200 -
+2026-03-17 12:10:39,128 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:10:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:10:43,194 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:10:43] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-17 12:10:43,200 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:10:43] "GET / HTTP/1.1" 200 -
+2026-03-17 12:10:43,234 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:10:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:10:44,275 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:10:44] "GET /login HTTP/1.1" 200 -
+2026-03-17 12:10:44,306 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:10:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:10:52,767 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:10:52] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-17 12:10:52,775 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:10:52] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-17 12:10:52,827 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:10:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:10:54,239 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:10:54] "GET /unlock/gesture HTTP/1.1" 200 -
+2026-03-17 12:10:54,278 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:10:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:11:06,312 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:11:06] "POST /unlock/gesture HTTP/1.1" 200 -
+2026-03-17 12:11:32,969 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:11:32] "POST /unlock/gesture HTTP/1.1" 200 -
+2026-03-17 12:11:35,012 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:11:35] "GET /dashboard HTTP/1.1" 200 -
+2026-03-17 12:11:35,055 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:11:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:13:07,222 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:13:07] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 12:13:07,269 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:13:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:13:08,482 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:13:08] "GET /enroll/fingerprint HTTP/1.1" 200 -
+2026-03-17 12:13:08,523 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:13:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:13:09,830 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:13:09] "POST /enroll/fingerprint/register-options HTTP/1.1" 200 -
+2026-03-17 12:14:12,533 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rocks\\Desktop\\test\\app_lock\\config.py', reloading
+2026-03-17 12:14:12,825 - werkzeug - INFO -  * Restarting with stat
+2026-03-17 12:14:13,409 - __main__ - INFO - Database initialized successfully.
+2026-03-17 12:14:13,409 - __main__ - INFO - Starting App Lock server...
+2026-03-17 12:14:13,425 - werkzeug - WARNING -  * Debugger is active!
+2026-03-17 12:14:13,438 - werkzeug - INFO -  * Debugger PIN: 112-238-025
+2026-03-17 12:14:14,455 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rocks\\Desktop\\test\\app_lock\\config.py', reloading
+2026-03-17 12:14:14,526 - werkzeug - INFO -  * Restarting with stat
+2026-03-17 12:14:15,068 - __main__ - INFO - Database initialized successfully.
+2026-03-17 12:14:15,068 - __main__ - INFO - Starting App Lock server...
+2026-03-17 12:14:15,084 - werkzeug - WARNING -  * Debugger is active!
+2026-03-17 12:14:15,086 - werkzeug - INFO -  * Debugger PIN: 112-238-025
+2026-03-17 12:14:17,123 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rocks\\Desktop\\test\\app_lock\\config.py', reloading
+2026-03-17 12:14:17,210 - werkzeug - INFO -  * Restarting with stat
+2026-03-17 12:14:17,808 - __main__ - INFO - Database initialized successfully.
+2026-03-17 12:14:17,808 - __main__ - INFO - Starting App Lock server...
+2026-03-17 12:14:17,827 - werkzeug - WARNING -  * Debugger is active!
+2026-03-17 12:14:17,830 - werkzeug - INFO -  * Debugger PIN: 112-238-025
+2026-03-17 12:14:18,855 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rocks\\Desktop\\test\\app_lock\\config.py', reloading
+2026-03-17 12:14:18,941 - werkzeug - INFO -  * Restarting with stat
+2026-03-17 12:14:19,606 - __main__ - INFO - Database initialized successfully.
+2026-03-17 12:14:19,606 - __main__ - INFO - Starting App Lock server...
+2026-03-17 12:14:19,627 - werkzeug - WARNING -  * Debugger is active!
+2026-03-17 12:14:19,631 - werkzeug - INFO -  * Debugger PIN: 112-238-025
+2026-03-17 12:14:22,684 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rocks\\Desktop\\test\\app_lock\\config.py', reloading
+2026-03-17 12:14:22,768 - werkzeug - INFO -  * Restarting with stat
+2026-03-17 12:14:23,339 - __main__ - INFO - Database initialized successfully.
+2026-03-17 12:14:23,339 - __main__ - INFO - Starting App Lock server...
+2026-03-17 12:14:23,358 - werkzeug - WARNING -  * Debugger is active!
+2026-03-17 12:14:23,363 - werkzeug - INFO -  * Debugger PIN: 112-238-025
+2026-03-17 12:14:39,562 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rocks\\Desktop\\test\\app_lock\\config.py', reloading
+2026-03-17 12:14:39,682 - werkzeug - INFO -  * Restarting with stat
+2026-03-17 12:14:40,360 - __main__ - INFO - Database initialized successfully.
+2026-03-17 12:14:40,360 - __main__ - INFO - Starting App Lock server...
+2026-03-17 12:14:40,373 - werkzeug - WARNING -  * Debugger is active!
+2026-03-17 12:14:40,375 - werkzeug - INFO -  * Debugger PIN: 112-238-025
+2026-03-17 12:14:51,528 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rocks\\Desktop\\test\\app_lock\\config.py', reloading
+2026-03-17 12:14:51,625 - werkzeug - INFO -  * Restarting with stat
+2026-03-17 12:14:52,233 - __main__ - INFO - Database initialized successfully.
+2026-03-17 12:14:52,233 - __main__ - INFO - Starting App Lock server...
+2026-03-17 12:14:52,247 - werkzeug - WARNING -  * Debugger is active!
+2026-03-17 12:14:52,251 - werkzeug - INFO -  * Debugger PIN: 112-238-025
+2026-03-17 12:14:54,307 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:14:54] "POST /enroll/fingerprint/register-options HTTP/1.1" 200 -
+2026-03-17 12:14:55,130 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:14:55] "POST /enroll/fingerprint/register-options HTTP/1.1" 200 -
+2026-03-17 12:14:55,293 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:14:55] "POST /enroll/fingerprint/register-options HTTP/1.1" 200 -
+2026-03-17 12:14:56,658 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:14:56] "GET /enroll/fingerprint HTTP/1.1" 200 -
+2026-03-17 12:14:56,804 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:14:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:14:58,067 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:14:58] "POST /enroll/fingerprint/register-options HTTP/1.1" 200 -
+2026-03-17 12:15:13,554 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rocks\\Desktop\\test\\app_lock\\config.py', reloading
+2026-03-17 12:15:13,659 - werkzeug - INFO -  * Restarting with stat
+2026-03-17 12:15:14,208 - __main__ - INFO - Database initialized successfully.
+2026-03-17 12:15:14,208 - __main__ - INFO - Starting App Lock server...
+2026-03-17 12:15:14,222 - werkzeug - WARNING -  * Debugger is active!
+2026-03-17 12:15:14,230 - werkzeug - INFO -  * Debugger PIN: 112-238-025
+2026-03-17 12:15:26,264 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:15:26] "GET / HTTP/1.1" 200 -
+2026-03-17 12:15:26,509 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:15:26] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-03-17 12:15:28,019 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:15:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-17 12:15:29,457 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:15:29] "GET /login HTTP/1.1" 200 -
+2026-03-17 12:15:29,708 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:15:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:15:38,217 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:15:38] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-17 12:15:38,546 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:15:38] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-17 12:15:38,782 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:15:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:15:41,544 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:15:41] "GET /unlock/face HTTP/1.1" 200 -
+2026-03-17 12:15:41,880 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:15:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:15:53,021 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:15:53] "POST /unlock/face HTTP/1.1" 200 -
+2026-03-17 12:15:55,389 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:15:55] "GET /dashboard HTTP/1.1" 200 -
+2026-03-17 12:15:55,632 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:15:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:15:58,529 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:15:58] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 12:15:58,879 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:15:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:16:00,802 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:16:00] "GET /enroll/fingerprint HTTP/1.1" 200 -
+2026-03-17 12:16:01,145 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:16:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:16:02,187 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:16:02] "POST /enroll/fingerprint/register-options HTTP/1.1" 200 -
+2026-03-17 12:16:45,158 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:16:45] "POST /enroll/fingerprint/register-complete HTTP/1.1" 200 -
+2026-03-17 12:16:47,460 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:16:47] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-17 12:16:47,786 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:16:47] "[32mGET /enroll/ HTTP/1.1[0m" 302 -
+2026-03-17 12:16:48,005 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:16:48] "GET /login?next=/enroll/ HTTP/1.1" 200 -
+2026-03-17 12:16:48,106 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:16:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:16:58,298 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:16:58] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-17 12:16:58,608 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:16:58] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-17 12:16:58,875 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:16:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:17:00,509 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:17:00] "GET /unlock/fingerprint HTTP/1.1" 200 -
+2026-03-17 12:17:00,858 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:17:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:17:02,267 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:17:02] "POST /unlock/fingerprint/auth-options HTTP/1.1" 200 -
+2026-03-17 12:17:11,628 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:17:11] "POST /unlock/fingerprint/auth-options HTTP/1.1" 200 -
+2026-03-17 12:17:27,998 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:17:27] "POST /unlock/fingerprint/auth-complete HTTP/1.1" 200 -
+2026-03-17 12:17:30,345 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:17:30] "GET /dashboard HTTP/1.1" 200 -
+2026-03-17 12:17:30,578 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:17:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:17:33,406 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:17:33] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-17 12:17:33,725 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:17:33] "GET / HTTP/1.1" 200 -
+2026-03-17 12:17:33,976 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:17:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:17:49,229 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:17:49] "GET / HTTP/1.1" 200 -
+2026-03-17 12:17:49,264 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:17:49] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-03-17 12:17:54,260 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:17:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-17 12:18:03,013 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:18:03] "GET /login HTTP/1.1" 200 -
+2026-03-17 12:18:03,148 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:18:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:18:11,363 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:18:11] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-17 12:18:11,372 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:18:11] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-17 12:18:11,723 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:18:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:18:16,309 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:18:16] "GET /unlock/pattern HTTP/1.1" 200 -
+2026-03-17 12:18:16,616 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:18:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:18:18,815 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:18:18] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-17 12:18:18,939 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:18:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:18:22,018 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:18:22] "GET /unlock/fingerprint HTTP/1.1" 200 -
+2026-03-17 12:18:22,329 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:18:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:18:24,978 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:18:24] "POST /unlock/fingerprint/auth-options HTTP/1.1" 200 -
+2026-03-17 12:18:27,663 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:18:27] "POST /unlock/fingerprint/auth-complete HTTP/1.1" 200 -
+2026-03-17 12:18:29,991 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:18:29] "GET /dashboard HTTP/1.1" 200 -
+2026-03-17 12:18:30,013 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:18:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:18:33,475 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:18:33] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 12:18:33,785 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:18:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:18:36,608 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:18:36] "[32mPOST /enroll/remove/fingerprint HTTP/1.1[0m" 302 -
+2026-03-17 12:18:36,617 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:18:36] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 12:18:36,850 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:18:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:18:37,783 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:18:37] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 12:18:37,883 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:18:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:18:39,745 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:18:39] "GET /enroll/fingerprint HTTP/1.1" 200 -
+2026-03-17 12:18:40,046 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:18:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:18:41,380 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:18:41] "POST /enroll/fingerprint/register-options HTTP/1.1" 200 -
+2026-03-17 12:18:56,089 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:18:56] "POST /enroll/fingerprint/register-complete HTTP/1.1" 200 -
+2026-03-17 12:18:57,731 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:18:57] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 12:18:57,825 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:18:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:25:21,632 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:25:21] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-17 12:25:21,724 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:25:21] "GET / HTTP/1.1" 200 -
+2026-03-17 12:25:21,890 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:25:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:25:24,307 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:25:24] "GET /login HTTP/1.1" 200 -
+2026-03-17 12:25:24,625 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:25:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:25:32,572 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:25:32] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-17 12:25:32,585 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:25:32] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-17 12:25:32,616 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:25:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:25:36,030 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:25:36] "GET /unlock/face HTTP/1.1" 200 -
+2026-03-17 12:25:36,138 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:25:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:25:45,455 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:25:45] "POST /unlock/face HTTP/1.1" 200 -
+2026-03-17 12:25:47,789 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:25:47] "GET /dashboard HTTP/1.1" 200 -
+2026-03-17 12:25:47,812 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:25:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:25:53,332 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:25:53] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-17 12:25:53,647 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:25:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:26:04,451 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:26:04] "GET /dashboard HTTP/1.1" 200 -
+2026-03-17 12:26:04,551 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:26:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:26:10,764 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:26:10] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-17 12:26:11,080 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:26:11] "GET / HTTP/1.1" 200 -
+2026-03-17 12:26:11,410 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:26:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:26:12,777 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:26:12] "GET /login HTTP/1.1" 200 -
+2026-03-17 12:26:13,090 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:26:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:26:21,773 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:26:21] "POST /login HTTP/1.1" 200 -
+2026-03-17 12:26:21,803 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:26:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:26:30,163 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:26:30] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-17 12:26:30,177 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:26:30] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-17 12:26:30,508 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:26:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:26:31,947 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:26:31] "GET /unlock/face HTTP/1.1" 200 -
+2026-03-17 12:26:32,258 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:26:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:26:41,435 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:26:41] "POST /unlock/face HTTP/1.1" 200 -
+2026-03-17 12:26:43,464 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:26:43] "GET /dashboard HTTP/1.1" 200 -
+2026-03-17 12:26:43,762 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:26:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:26:46,001 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:26:46] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-17 12:26:46,092 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:26:46] "GET / HTTP/1.1" 200 -
+2026-03-17 12:26:46,252 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:26:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:26:47,422 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:26:47] "GET /login HTTP/1.1" 200 -
+2026-03-17 12:26:47,737 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:26:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:26:55,465 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:26:55] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-17 12:26:55,472 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:26:55] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-17 12:26:55,504 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:26:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:26:57,848 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:26:57] "GET /unlock/gesture HTTP/1.1" 200 -
+2026-03-17 12:26:57,963 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:26:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:27:20,255 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:27:20] "POST /unlock/gesture HTTP/1.1" 200 -
+2026-03-17 12:27:41,347 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:27:41] "POST /unlock/gesture HTTP/1.1" 200 -
+2026-03-17 12:27:43,375 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:27:43] "GET /dashboard HTTP/1.1" 200 -
+2026-03-17 12:27:43,674 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:27:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:28:08,553 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:28:08] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-17 12:28:08,670 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:28:08] "GET / HTTP/1.1" 200 -
+2026-03-17 12:28:08,800 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:28:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:28:11,480 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:28:11] "GET /login HTTP/1.1" 200 -
+2026-03-17 12:28:11,798 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:28:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:28:19,320 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:28:19] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-17 12:28:19,335 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:28:19] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-17 12:28:19,367 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:28:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:28:22,720 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:28:22] "GET /unlock/fingerprint HTTP/1.1" 200 -
+2026-03-17 12:28:22,802 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:28:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:28:25,302 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:28:25] "POST /unlock/fingerprint/auth-options HTTP/1.1" 200 -
+2026-03-17 12:28:27,500 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:28:27] "POST /unlock/fingerprint/auth-complete HTTP/1.1" 200 -
+2026-03-17 12:28:29,529 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:28:29] "GET /dashboard HTTP/1.1" 200 -
+2026-03-17 12:28:29,830 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:28:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-17 12:28:36,710 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:28:36] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-17 12:28:36,842 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:28:36] "GET / HTTP/1.1" 200 -
+2026-03-17 12:28:36,960 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2026 12:28:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:24:28,297 - __main__ - INFO - Database initialized successfully.
+2026-03-18 11:24:28,297 - __main__ - INFO - Starting App Lock server...
+2026-03-18 11:24:28,416 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.105.30.208:5000
+2026-03-18 11:24:28,416 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-18 11:24:28,420 - werkzeug - INFO -  * Restarting with stat
+2026-03-18 11:24:29,066 - __main__ - INFO - Database initialized successfully.
+2026-03-18 11:24:29,066 - __main__ - INFO - Starting App Lock server...
+2026-03-18 11:24:29,078 - werkzeug - WARNING -  * Debugger is active!
+2026-03-18 11:24:29,082 - werkzeug - INFO -  * Debugger PIN: 112-238-025
+2026-03-18 11:25:37,934 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:25:37] "GET / HTTP/1.1" 200 -
+2026-03-18 11:25:38,227 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:25:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:25:38,871 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:25:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-18 11:26:48,866 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:26:48] "GET / HTTP/1.1" 200 -
+2026-03-18 11:26:49,113 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:26:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:27:19,282 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:27:19] "GET /signup HTTP/1.1" 200 -
+2026-03-18 11:27:19,643 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:27:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:27:41,302 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:27:41] "[32mPOST /signup HTTP/1.1[0m" 302 -
+2026-03-18 11:27:41,699 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:27:41] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-18 11:27:41,892 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:27:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:27:44,754 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:27:44] "GET /enroll/pin HTTP/1.1" 200 -
+2026-03-18 11:27:45,111 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:27:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:27:53,879 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:27:53] "[32mPOST /enroll/pin HTTP/1.1[0m" 302 -
+2026-03-18 11:27:54,202 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:27:54] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-18 11:27:54,462 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:27:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:27:55,577 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:27:55] "GET /enroll/pattern HTTP/1.1" 200 -
+2026-03-18 11:27:55,927 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:27:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:28:09,001 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:28:09] "POST /enroll/pattern HTTP/1.1" 200 -
+2026-03-18 11:28:10,863 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:28:10] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-18 11:28:11,105 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:28:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:28:13,226 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:28:13] "GET /enroll/face HTTP/1.1" 200 -
+2026-03-18 11:28:13,586 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:28:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:28:38,714 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:28:38] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-18 11:28:39,113 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:28:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:28:40,953 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:28:40] "GET /enroll/face HTTP/1.1" 200 -
+2026-03-18 11:28:41,377 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:28:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:29:10,209 - ml.face_recognition_ml - INFO - Face SVM trained for user 2: 20 samples, saved to C:\Users\rocks\Desktop\test\app_lock\trained_models\face_model_2.pkl
+2026-03-18 11:29:10,263 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:29:10] "POST /enroll/face/start HTTP/1.1" 200 -
+2026-03-18 11:29:13,624 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:29:13] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-18 11:29:13,883 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:29:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:29:19,027 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:29:19] "GET /enroll/gesture HTTP/1.1" 200 -
+2026-03-18 11:29:19,397 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:29:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:30:02,749 - ml.gesture_recognition - INFO - Gesture sequence enrolled for user 2: 3 gestures
+2026-03-18 11:30:02,814 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:30:02] "POST /enroll/gesture/start HTTP/1.1" 200 -
+2026-03-18 11:30:06,172 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:30:06] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-18 11:30:06,429 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:30:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:30:08,676 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:30:08] "GET /enroll/fingerprint HTTP/1.1" 200 -
+2026-03-18 11:30:09,037 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:30:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:30:10,537 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:30:10] "POST /enroll/fingerprint/register-options HTTP/1.1" 200 -
+2026-03-18 11:30:23,227 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:30:23] "POST /enroll/fingerprint/register-complete HTTP/1.1" 200 -
+2026-03-18 11:30:25,772 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:30:25] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-18 11:30:26,121 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:30:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:30:26,957 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:30:26] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-18 11:30:27,322 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:30:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:30:28,778 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:30:28] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-18 11:30:29,130 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:30:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:30:32,095 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:30:32] "GET /dashboard HTTP/1.1" 200 -
+2026-03-18 11:30:32,444 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:30:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:30:40,294 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:30:40] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-18 11:30:40,613 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:30:40] "GET / HTTP/1.1" 200 -
+2026-03-18 11:30:40,877 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:30:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:30:46,262 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:30:46] "GET /login HTTP/1.1" 200 -
+2026-03-18 11:30:46,619 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:30:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:30:57,794 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:30:57] "POST /login HTTP/1.1" 200 -
+2026-03-18 11:30:58,167 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:30:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:31:08,615 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:31:08] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-18 11:31:08,998 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:31:08] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-18 11:31:09,190 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:31:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:31:10,883 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:31:10] "GET /unlock/face HTTP/1.1" 200 -
+2026-03-18 11:31:11,250 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:31:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:31:23,916 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:31:23] "POST /unlock/face HTTP/1.1" 200 -
+2026-03-18 11:31:26,260 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:31:26] "GET /dashboard HTTP/1.1" 200 -
+2026-03-18 11:31:26,519 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:31:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:31:35,003 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:31:35] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-18 11:31:35,319 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:31:35] "GET / HTTP/1.1" 200 -
+2026-03-18 11:31:35,583 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:31:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:31:36,962 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:31:36] "GET /login HTTP/1.1" 200 -
+2026-03-18 11:31:37,319 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:31:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:31:48,219 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:31:48] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-18 11:31:48,539 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:31:48] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-18 11:31:48,802 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:31:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:31:55,481 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:31:55] "GET /unlock/gesture HTTP/1.1" 200 -
+2026-03-18 11:31:55,854 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:31:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:32:20,094 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:32:20] "POST /unlock/gesture HTTP/1.1" 200 -
+2026-03-18 11:34:39,555 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:34:39] "POST /unlock/gesture HTTP/1.1" 200 -
+2026-03-18 11:35:09,352 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rocks\\Desktop\\test\\app_lock\\routes\\unlock.py', reloading
+2026-03-18 11:35:10,379 - werkzeug - INFO -  * Restarting with stat
+2026-03-18 11:35:11,631 - __main__ - INFO - Database initialized successfully.
+2026-03-18 11:35:11,631 - __main__ - INFO - Starting App Lock server...
+2026-03-18 11:35:11,658 - werkzeug - WARNING -  * Debugger is active!
+2026-03-18 11:35:11,660 - werkzeug - INFO -  * Debugger PIN: 112-238-025
+2026-03-18 11:35:31,934 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:35:31] "POST /unlock/gesture HTTP/1.1" 200 -
+2026-03-18 11:35:36,102 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rocks\\Desktop\\test\\app_lock\\routes\\unlock.py', reloading
+2026-03-18 11:35:36,347 - werkzeug - INFO -  * Restarting with stat
+2026-03-18 11:35:37,066 - __main__ - INFO - Database initialized successfully.
+2026-03-18 11:35:37,067 - __main__ - INFO - Starting App Lock server...
+2026-03-18 11:35:37,077 - werkzeug - WARNING -  * Debugger is active!
+2026-03-18 11:35:37,082 - werkzeug - INFO -  * Debugger PIN: 112-238-025
+2026-03-18 11:36:04,667 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rocks\\Desktop\\test\\app_lock\\ml\\gesture_recognition.py', reloading
+2026-03-18 11:36:04,958 - werkzeug - INFO -  * Restarting with stat
+2026-03-18 11:36:05,717 - __main__ - INFO - Database initialized successfully.
+2026-03-18 11:36:05,718 - __main__ - INFO - Starting App Lock server...
+2026-03-18 11:36:05,736 - werkzeug - WARNING -  * Debugger is active!
+2026-03-18 11:36:05,740 - werkzeug - INFO -  * Debugger PIN: 112-238-025
+2026-03-18 11:37:59,684 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:37:59] "POST /unlock/gesture HTTP/1.1" 200 -
+2026-03-18 11:38:29,362 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:38:29] "POST /unlock/gesture HTTP/1.1" 200 -
+2026-03-18 11:38:31,790 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:38:31] "GET /dashboard HTTP/1.1" 200 -
+2026-03-18 11:38:32,071 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:38:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:38:34,781 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:38:34] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-18 11:38:35,111 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:38:35] "GET / HTTP/1.1" 200 -
+2026-03-18 11:38:35,370 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:38:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:38:36,842 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:38:36] "GET /login HTTP/1.1" 200 -
+2026-03-18 11:38:37,196 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:38:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:38:48,499 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:38:48] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-18 11:38:48,842 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:38:48] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-18 11:38:49,084 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:38:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:38:52,536 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:38:52] "GET /unlock/face HTTP/1.1" 200 -
+2026-03-18 11:38:52,900 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:38:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:39:29,750 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:39:29] "POST /unlock/face HTTP/1.1" 200 -
+2026-03-18 11:39:32,137 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:39:32] "GET /dashboard HTTP/1.1" 200 -
+2026-03-18 11:39:32,398 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:39:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:40:10,174 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:40:10] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-18 11:40:10,497 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:40:10] "GET / HTTP/1.1" 200 -
+2026-03-18 11:40:10,761 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:40:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:40:12,114 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:40:12] "GET /login HTTP/1.1" 200 -
+2026-03-18 11:40:12,475 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:40:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:40:24,126 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:40:24] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-18 11:40:24,451 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:40:24] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-18 11:40:24,714 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:40:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:40:26,890 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:40:26] "GET /unlock/face HTTP/1.1" 200 -
+2026-03-18 11:40:27,252 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:40:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:40:42,063 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:40:42] "POST /unlock/face HTTP/1.1" 200 -
+2026-03-18 11:40:44,424 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:40:44] "GET /dashboard HTTP/1.1" 200 -
+2026-03-18 11:40:44,663 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:40:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:40:46,449 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:40:46] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-18 11:40:46,770 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:40:46] "GET / HTTP/1.1" 200 -
+2026-03-18 11:40:47,033 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:40:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:40:54,459 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:40:54] "GET /login HTTP/1.1" 200 -
+2026-03-18 11:40:54,819 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:40:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:41:11,889 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:41:11] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-18 11:41:12,214 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:41:12] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-18 11:41:12,477 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:41:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:41:15,884 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:41:15] "GET /unlock/face HTTP/1.1" 200 -
+2026-03-18 11:41:16,242 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:41:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:41:28,107 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:41:28] "POST /unlock/face HTTP/1.1" 200 -
+2026-03-18 11:41:30,493 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:41:30] "GET /dashboard HTTP/1.1" 200 -
+2026-03-18 11:41:30,750 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:41:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:42:45,208 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:42:45] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-18 11:42:45,469 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:42:45] "GET / HTTP/1.1" 200 -
+2026-03-18 11:42:45,525 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:42:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:42:47,315 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:42:47] "GET /login HTTP/1.1" 200 -
+2026-03-18 11:42:47,579 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:42:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:43:02,345 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:43:02] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-18 11:43:02,676 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:43:02] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-18 11:43:02,934 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:43:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:43:04,566 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:43:04] "GET /unlock/face HTTP/1.1" 200 -
+2026-03-18 11:43:04,918 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:43:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:43:47,100 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:43:47] "POST /unlock/face HTTP/1.1" 200 -
+2026-03-18 11:43:49,473 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:43:49] "GET /dashboard HTTP/1.1" 200 -
+2026-03-18 11:43:49,734 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:43:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:43:54,862 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:43:54] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-18 11:43:55,182 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:43:55] "GET / HTTP/1.1" 200 -
+2026-03-18 11:43:55,448 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:43:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:43:59,962 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:43:59] "GET /login HTTP/1.1" 200 -
+2026-03-18 11:44:00,316 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:44:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:45:54,714 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rocks\\Desktop\\test\\app_lock\\ml\\face_recognition_ml.py', reloading
+2026-03-18 11:45:55,078 - werkzeug - INFO -  * Restarting with stat
+2026-03-18 11:45:55,771 - __main__ - INFO - Database initialized successfully.
+2026-03-18 11:45:55,772 - __main__ - INFO - Starting App Lock server...
+2026-03-18 11:45:55,786 - werkzeug - WARNING -  * Debugger is active!
+2026-03-18 11:45:55,789 - werkzeug - INFO -  * Debugger PIN: 112-238-025
+2026-03-18 11:47:18,638 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:47:18] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-18 11:47:18,703 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:47:18] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-18 11:47:19,166 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:47:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:47:23,939 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:47:23] "GET /unlock/pin HTTP/1.1" 200 -
+2026-03-18 11:47:24,294 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:47:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:47:29,109 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:47:29] "POST /unlock/pin HTTP/1.1" 200 -
+2026-03-18 11:47:30,501 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:47:30] "GET /dashboard HTTP/1.1" 200 -
+2026-03-18 11:47:30,713 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:47:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:47:33,746 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:47:33] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-18 11:47:34,100 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:47:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:47:37,051 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:47:37] "[32mPOST /enroll/remove/face HTTP/1.1[0m" 302 -
+2026-03-18 11:47:37,376 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:47:37] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-18 11:47:37,633 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:47:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:47:38,453 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:47:38] "GET /enroll/face HTTP/1.1" 200 -
+2026-03-18 11:47:38,802 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:47:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:48:22,034 - ml.face_recognition_ml - INFO - Face SVM trained for user 2: 20 samples, saved to C:\Users\rocks\Desktop\test\app_lock\trained_models\face_model_2.pkl
+2026-03-18 11:48:22,103 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:48:22] "POST /enroll/face/start HTTP/1.1" 200 -
+2026-03-18 11:48:25,482 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:48:25] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-18 11:48:25,737 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:48:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:48:28,145 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:48:28] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-18 11:48:28,483 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:48:28] "GET / HTTP/1.1" 200 -
+2026-03-18 11:48:28,725 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:48:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:48:32,333 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:48:32] "GET /login HTTP/1.1" 200 -
+2026-03-18 11:48:32,692 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:48:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:48:43,972 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:48:43] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-18 11:48:44,302 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:48:44] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-18 11:48:44,559 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:48:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:48:49,555 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:48:49] "GET /unlock/face HTTP/1.1" 200 -
+2026-03-18 11:48:49,914 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:48:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:49:17,379 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:49:17] "POST /unlock/face HTTP/1.1" 200 -
+2026-03-18 11:49:19,766 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:49:19] "GET /dashboard HTTP/1.1" 200 -
+2026-03-18 11:49:20,013 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:49:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:49:24,853 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:49:24] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-18 11:49:25,177 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:49:25] "GET / HTTP/1.1" 200 -
+2026-03-18 11:49:25,428 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:49:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:49:26,477 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:49:26] "GET /login HTTP/1.1" 200 -
+2026-03-18 11:49:26,850 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:49:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:49:36,775 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:49:36] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-18 11:49:37,104 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:49:37] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-18 11:49:37,365 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:49:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:49:39,829 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:49:39] "GET /unlock/face HTTP/1.1" 200 -
+2026-03-18 11:49:40,204 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:49:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:49:54,709 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:49:54] "POST /unlock/face HTTP/1.1" 200 -
+2026-03-18 11:49:57,083 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:49:57] "GET /dashboard HTTP/1.1" 200 -
+2026-03-18 11:49:57,341 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:49:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:50:01,882 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:50:01] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-18 11:50:02,237 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:50:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:50:04,496 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:50:04] "[32mPOST /enroll/remove/face HTTP/1.1[0m" 302 -
+2026-03-18 11:50:04,828 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:50:04] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-18 11:50:05,065 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:50:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:50:05,867 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:50:05] "GET /enroll/face HTTP/1.1" 200 -
+2026-03-18 11:50:06,229 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:50:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:50:38,827 - ml.face_recognition_ml - INFO - Face SVM trained for user 1: 20 samples, saved to C:\Users\rocks\Desktop\test\app_lock\trained_models\face_model_1.pkl
+2026-03-18 11:50:38,890 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:50:38] "POST /enroll/face/start HTTP/1.1" 200 -
+2026-03-18 11:50:42,280 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:50:42] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-18 11:50:42,534 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:50:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:50:43,938 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:50:43] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-18 11:50:44,254 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:50:44] "GET / HTTP/1.1" 200 -
+2026-03-18 11:50:44,520 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:50:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:50:46,137 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:50:46] "GET /login HTTP/1.1" 200 -
+2026-03-18 11:50:46,500 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:50:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:50:56,970 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:50:56] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-18 11:50:57,295 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:50:57] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-18 11:50:57,557 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:50:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:50:58,420 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:50:58] "GET /unlock/face HTTP/1.1" 200 -
+2026-03-18 11:50:58,792 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:50:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 11:51:10,551 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:51:10] "POST /unlock/face HTTP/1.1" 200 -
+2026-03-18 11:51:12,940 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:51:12] "GET /dashboard HTTP/1.1" 200 -
+2026-03-18 11:51:13,199 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 11:51:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:15:31,613 - __main__ - INFO - Database initialized successfully.
+2026-03-18 13:15:31,613 - __main__ - INFO - Starting App Lock server...
+2026-03-18 13:15:31,674 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.105.30.208:5000
+2026-03-18 13:15:31,675 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-18 13:15:31,678 - werkzeug - INFO -  * Restarting with stat
+2026-03-18 13:15:32,270 - __main__ - INFO - Database initialized successfully.
+2026-03-18 13:15:32,270 - __main__ - INFO - Starting App Lock server...
+2026-03-18 13:15:32,281 - werkzeug - WARNING -  * Debugger is active!
+2026-03-18 13:15:32,287 - werkzeug - INFO -  * Debugger PIN: 112-238-025
+2026-03-18 13:15:44,918 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:15:44] "GET /dashboard HTTP/1.1" 200 -
+2026-03-18 13:15:45,232 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:15:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:15:45,596 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:15:45] "GET /dashboard HTTP/1.1" 200 -
+2026-03-18 13:15:45,855 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:15:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:15:49,297 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:15:49] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-18 13:15:49,661 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:15:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:15:52,697 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:15:52] "[32mPOST /enroll/remove/face HTTP/1.1[0m" 302 -
+2026-03-18 13:15:53,020 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:15:53] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-18 13:15:53,283 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:15:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:15:54,134 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:15:54] "GET /enroll/face HTTP/1.1" 200 -
+2026-03-18 13:15:54,503 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:15:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:16:32,832 - ml.face_recognition_ml - INFO - LBPH model trained for user 1 and saved to C:\Users\rocks\Desktop\test\app_lock\trained_models\face_model_1.xml
+2026-03-18 13:16:32,899 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:16:32] "POST /enroll/face/start HTTP/1.1" 200 -
+2026-03-18 13:16:36,979 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:16:36] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-18 13:16:37,238 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:16:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:16:52,498 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:16:52] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-18 13:16:52,841 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:16:52] "GET / HTTP/1.1" 200 -
+2026-03-18 13:16:53,073 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:16:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:16:54,662 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:16:54] "GET /login HTTP/1.1" 200 -
+2026-03-18 13:16:55,004 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:16:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:17:05,485 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:17:05] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-18 13:17:05,836 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:17:05] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-18 13:17:06,063 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:17:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:17:09,622 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:17:09] "GET /unlock/face HTTP/1.1" 200 -
+2026-03-18 13:17:09,972 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:17:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:17:51,813 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:17:51] "POST /unlock/face HTTP/1.1" 200 -
+2026-03-18 13:17:54,152 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:17:54] "GET /dashboard HTTP/1.1" 200 -
+2026-03-18 13:17:54,411 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:17:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:17:58,581 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:17:58] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-18 13:17:58,906 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:17:58] "GET / HTTP/1.1" 200 -
+2026-03-18 13:17:59,156 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:17:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:18:00,365 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:18:00] "GET /login HTTP/1.1" 200 -
+2026-03-18 13:18:00,720 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:18:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:18:08,866 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:18:08] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-18 13:18:09,191 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:18:09] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-18 13:18:09,443 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:18:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:18:11,875 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:18:11] "GET /unlock/face HTTP/1.1" 200 -
+2026-03-18 13:18:12,360 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:18:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:18:13,307 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:18:13] "POST /unlock/face HTTP/1.1" 200 -
+2026-03-18 13:18:16,222 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:18:16] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-18 13:18:16,480 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:18:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:18:19,855 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:18:19] "GET /unlock/pin HTTP/1.1" 200 -
+2026-03-18 13:18:20,219 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:18:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:18:24,467 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:18:24] "POST /unlock/pin HTTP/1.1" 200 -
+2026-03-18 13:18:25,818 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:18:25] "GET /dashboard HTTP/1.1" 200 -
+2026-03-18 13:18:26,073 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:18:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:18:29,343 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:18:29] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-18 13:18:29,699 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:18:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:18:30,625 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:18:30] "GET /enroll/face HTTP/1.1" 200 -
+2026-03-18 13:18:30,985 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:18:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:18:48,644 - ml.face_recognition_ml - INFO - LBPH model trained for user 2 and saved to C:\Users\rocks\Desktop\test\app_lock\trained_models\face_model_2.xml
+2026-03-18 13:18:48,694 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:18:48] "POST /enroll/face/start HTTP/1.1" 200 -
+2026-03-18 13:18:51,580 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:18:51] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-18 13:18:51,851 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:18:51] "[32mGET /enroll/ HTTP/1.1[0m" 302 -
+2026-03-18 13:18:51,909 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:18:51] "GET /login?next=/enroll/ HTTP/1.1" 200 -
+2026-03-18 13:18:52,082 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:18:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:19:00,268 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:19:00] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-18 13:19:00,282 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:19:00] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-18 13:19:00,641 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:19:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:19:01,894 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:19:01] "GET /unlock/face HTTP/1.1" 200 -
+2026-03-18 13:19:02,253 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:19:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:19:11,554 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:19:11] "POST /unlock/face HTTP/1.1" 200 -
+2026-03-18 13:19:13,911 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:19:13] "GET /dashboard HTTP/1.1" 200 -
+2026-03-18 13:19:14,158 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:19:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:20:21,768 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:20:21] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-18 13:20:22,011 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:20:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:23:38,633 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:23:38] "GET /dashboard HTTP/1.1" 200 -
+2026-03-18 13:23:38,830 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:23:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:23:45,165 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:23:45] "GET /dashboard HTTP/1.1" 200 -
+2026-03-18 13:23:45,426 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:23:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:23:48,208 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rocks\\Desktop\\test\\app_lock\\routes\\unlock.py', reloading
+2026-03-18 13:23:49,286 - werkzeug - INFO -  * Restarting with stat
+2026-03-18 13:23:50,699 - __main__ - INFO - Database initialized successfully.
+2026-03-18 13:23:50,700 - __main__ - INFO - Starting App Lock server...
+2026-03-18 13:23:50,719 - werkzeug - WARNING -  * Debugger is active!
+2026-03-18 13:23:50,736 - werkzeug - INFO -  * Debugger PIN: 112-238-025
+2026-03-18 13:26:43,056 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rocks\\Desktop\\test\\app_lock\\config.py', reloading
+2026-03-18 13:26:44,727 - werkzeug - INFO -  * Restarting with stat
+2026-03-18 13:26:49,865 - __main__ - INFO - Database initialized successfully.
+2026-03-18 13:26:49,866 - __main__ - INFO - Starting App Lock server...
+2026-03-18 13:26:49,897 - werkzeug - WARNING -  * Debugger is active!
+2026-03-18 13:26:49,927 - werkzeug - INFO -  * Debugger PIN: 112-238-025
+2026-03-18 13:26:58,185 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:26:58] "[32mGET / HTTP/1.1[0m" 302 -
+2026-03-18 13:26:58,459 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:26:58] "GET /dashboard HTTP/1.1" 200 -
+2026-03-18 13:26:59,133 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:26:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:27:03,398 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:27:03] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-18 13:27:03,671 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:27:03] "GET / HTTP/1.1" 200 -
+2026-03-18 13:27:03,757 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:27:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:27:16,468 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:27:16] "GET /login HTTP/1.1" 200 -
+2026-03-18 13:27:16,831 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:27:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:27:44,357 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:27:44] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-18 13:27:44,699 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:27:44] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-18 13:27:44,943 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:27:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:27:49,951 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:27:49] "GET /unlock/pattern HTTP/1.1" 200 -
+2026-03-18 13:27:50,320 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:27:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:27:53,111 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:27:53] "POST /unlock/pattern HTTP/1.1" 200 -
+2026-03-18 13:27:56,627 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:27:56] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-18 13:27:56,879 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:27:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:27:58,531 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:27:58] "GET /unlock/pin HTTP/1.1" 200 -
+2026-03-18 13:27:58,927 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:27:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:28:03,452 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:28:03] "POST /unlock/pin HTTP/1.1" 200 -
+2026-03-18 13:28:04,801 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:28:04] "GET /dashboard HTTP/1.1" 200 -
+2026-03-18 13:28:05,043 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:28:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:32:18,325 - __main__ - INFO - Database initialized successfully.
+2026-03-18 13:32:18,326 - __main__ - INFO - Starting App Lock server...
+2026-03-18 13:32:18,372 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.105.30.208:5000
+2026-03-18 13:32:18,372 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-18 13:32:18,375 - werkzeug - INFO -  * Restarting with stat
+2026-03-18 13:32:18,976 - __main__ - INFO - Database initialized successfully.
+2026-03-18 13:32:18,977 - __main__ - INFO - Starting App Lock server...
+2026-03-18 13:32:18,990 - werkzeug - WARNING -  * Debugger is active!
+2026-03-18 13:32:19,001 - werkzeug - INFO -  * Debugger PIN: 112-238-025
+2026-03-18 13:33:10,376 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:33:10] "[32mGET /enroll/ HTTP/1.1[0m" 302 -
+2026-03-18 13:33:10,653 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:33:10] "GET /login?next=/enroll/ HTTP/1.1" 200 -
+2026-03-18 13:33:10,884 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:33:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:33:14,615 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:33:14] "GET / HTTP/1.1" 200 -
+2026-03-18 13:33:14,869 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:33:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:33:17,427 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:33:17] "GET /signup HTTP/1.1" 200 -
+2026-03-18 13:33:17,772 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:33:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:33:32,881 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:33:32] "[32mPOST /signup HTTP/1.1[0m" 302 -
+2026-03-18 13:33:33,225 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:33:33] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-18 13:33:33,452 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:33:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:33:37,142 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:33:37] "GET /enroll/pin HTTP/1.1" 200 -
+2026-03-18 13:33:37,500 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:33:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:33:46,373 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:33:46] "[32mPOST /enroll/pin HTTP/1.1[0m" 302 -
+2026-03-18 13:33:46,690 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:33:46] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-18 13:33:46,946 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:33:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:33:48,119 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:33:48] "GET /enroll/pattern HTTP/1.1" 200 -
+2026-03-18 13:33:48,466 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:33:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:33:57,381 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:33:57] "POST /enroll/pattern HTTP/1.1" 200 -
+2026-03-18 13:33:59,223 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:33:59] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-18 13:33:59,481 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:33:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:34:00,734 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:34:00] "GET /enroll/face HTTP/1.1" 200 -
+2026-03-18 13:34:01,093 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:34:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:34:25,908 - ml.face_recognition_ml - INFO - LBPH model trained for user 1 and saved to C:\Users\rocks\Desktop\test\app_lock\trained_models\face_model_1.xml
+2026-03-18 13:34:25,935 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:34:25] "POST /enroll/face/start HTTP/1.1" 200 -
+2026-03-18 13:34:29,297 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:34:29] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-18 13:34:29,539 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:34:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:34:31,773 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:34:31] "GET /enroll/gesture HTTP/1.1" 200 -
+2026-03-18 13:34:32,126 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:34:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:34:34,372 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:34:34] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-18 13:34:34,720 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:34:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:34:38,263 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:34:38] "GET /enroll/fingerprint HTTP/1.1" 200 -
+2026-03-18 13:34:38,619 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:34:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:34:40,113 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:34:40] "POST /enroll/fingerprint/register-options HTTP/1.1" 200 -
+2026-03-18 13:34:57,109 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:34:57] "POST /enroll/fingerprint/register-complete HTTP/1.1" 200 -
+2026-03-18 13:34:59,660 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:34:59] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-18 13:35:00,023 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:35:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:35:47,992 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:35:47] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-18 13:35:48,315 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:35:48] "GET / HTTP/1.1" 200 -
+2026-03-18 13:35:48,564 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:35:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:35:51,203 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:35:51] "GET /login HTTP/1.1" 200 -
+2026-03-18 13:35:51,555 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:35:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:36:00,863 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:36:00] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-18 13:36:01,203 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:36:01] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-18 13:36:01,448 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:36:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:36:19,477 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:36:19] "GET /unlock/face HTTP/1.1" 200 -
+2026-03-18 13:36:19,831 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:36:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:36:28,408 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:36:28] "POST /unlock/face HTTP/1.1" 200 -
+2026-03-18 13:36:30,783 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:36:30] "GET /dashboard HTTP/1.1" 200 -
+2026-03-18 13:36:31,018 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:36:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:36:37,270 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:36:37] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-18 13:36:37,589 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:36:37] "GET / HTTP/1.1" 200 -
+2026-03-18 13:36:37,853 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:36:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:36:39,126 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:36:39] "GET /login HTTP/1.1" 200 -
+2026-03-18 13:36:39,461 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:36:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:36:52,520 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:36:52] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-18 13:36:52,842 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:36:52] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-18 13:36:53,101 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:36:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:37:16,318 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:37:16] "GET /unlock/face HTTP/1.1" 200 -
+2026-03-18 13:37:16,658 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:37:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:37:34,597 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:37:34] "POST /unlock/face HTTP/1.1" 200 -
+2026-03-18 13:37:36,953 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:37:36] "GET /dashboard HTTP/1.1" 200 -
+2026-03-18 13:37:37,210 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:37:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:37:49,710 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:37:49] "GET /dashboard HTTP/1.1" 200 -
+2026-03-18 13:37:50,070 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:37:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:37:51,473 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:37:51] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-18 13:37:51,810 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:37:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:37:56,150 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:37:56] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-03-18 13:37:56,469 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:37:56] "GET / HTTP/1.1" 200 -
+2026-03-18 13:37:56,731 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:37:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:37:58,029 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:37:58] "GET /login HTTP/1.1" 200 -
+2026-03-18 13:37:58,369 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:37:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:38:08,619 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:38:08] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-18 13:38:08,947 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:38:08] "GET /unlock/ HTTP/1.1" 200 -
+2026-03-18 13:38:09,203 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:38:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:38:21,204 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:38:21] "GET /unlock/fingerprint HTTP/1.1" 200 -
+2026-03-18 13:38:21,556 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:38:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:38:23,158 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:38:23] "POST /unlock/fingerprint/auth-options HTTP/1.1" 200 -
+2026-03-18 13:38:28,069 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:38:28] "POST /unlock/fingerprint/auth-complete HTTP/1.1" 200 -
+2026-03-18 13:38:30,112 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:38:30] "GET /dashboard HTTP/1.1" 200 -
+2026-03-18 13:38:30,451 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:38:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:38:38,995 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:38:38] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-18 13:38:39,339 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:38:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:38:40,659 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:38:40] "GET /enroll/gesture HTTP/1.1" 200 -
+2026-03-18 13:38:41,006 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:38:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:39:15,703 - ml.gesture_recognition - INFO - Gesture sequence enrolled for user 1: 3 gestures
+2026-03-18 13:39:15,737 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:39:15] "POST /enroll/gesture/start HTTP/1.1" 200 -
+2026-03-18 13:39:19,083 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:39:19] "GET /enroll/ HTTP/1.1" 200 -
+2026-03-18 13:39:19,326 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:39:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 13:39:25,866 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:39:25] "GET /dashboard HTTP/1.1" 200 -
+2026-03-18 13:39:26,216 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 13:39:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 14:10:55,874 - __main__ - INFO - Database initialized successfully.
+2026-03-18 14:10:55,875 - __main__ - INFO - Starting App Lock server...
+2026-03-18 14:10:55,917 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.105.30.208:5000
+2026-03-18 14:10:55,917 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-18 14:10:55,919 - werkzeug - INFO -  * Restarting with stat
+2026-03-18 14:10:56,432 - __main__ - INFO - Database initialized successfully.
+2026-03-18 14:10:56,433 - __main__ - INFO - Starting App Lock server...
+2026-03-18 14:10:56,445 - werkzeug - WARNING -  * Debugger is active!
+2026-03-18 14:10:56,451 - werkzeug - INFO -  * Debugger PIN: 112-238-025

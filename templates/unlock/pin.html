@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% block title %}PIN Unlock{% endblock %}
+
+{% block content %}
+<section class="min-h-[calc(100vh-72px)] flex items-center justify-center px-6 py-12">
+    <div class="w-full max-w-md">
+        <div class="glass-card rounded-2xl p-8">
+            <div class="text-center mb-6">
+                <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-violet-600 to-purple-400 rounded-2xl flex items-center justify-center text-2xl">
+                    <i class="fas fa-key"></i>
+                </div>
+                <h2 class="text-2xl font-bold">Enter PIN</h2>
+                <p class="text-gray-500 text-sm mt-1">Enter your PIN to unlock</p>
+            </div>
+
+            <div id="pin-display" class="flex justify-center gap-3 mb-8">
+                <div class="pin-dot"></div>
+                <div class="pin-dot"></div>
+                <div class="pin-dot"></div>
+                <div class="pin-dot"></div>
+                <div class="pin-dot"></div>
+                <div class="pin-dot"></div>
+            </div>
+
+            <div id="error-msg" class="hidden text-center text-red-400 text-sm mb-4"></div>
+
+            <div class="grid grid-cols-3 gap-3 max-w-[276px] mx-auto">
+                <button class="pin-key" onclick="addDigit('1')">1</button>
+                <button class="pin-key" onclick="addDigit('2')">2</button>
+                <button class="pin-key" onclick="addDigit('3')">3</button>
+                <button class="pin-key" onclick="addDigit('4')">4</button>
+                <button class="pin-key" onclick="addDigit('5')">5</button>
+                <button class="pin-key" onclick="addDigit('6')">6</button>
+                <button class="pin-key" onclick="addDigit('7')">7</button>
+                <button class="pin-key" onclick="addDigit('8')">8</button>
+                <button class="pin-key" onclick="addDigit('9')">9</button>
+                <button class="pin-key text-sm text-gray-500" onclick="clearPin()"><i class="fas fa-times"></i></button>
+                <button class="pin-key" onclick="addDigit('0')">0</button>
+                <button class="pin-key text-sm text-red-400" onclick="deleteDigit()"><i class="fas fa-backspace"></i></button>
+            </div>
+
+            <div class="text-center mt-6">
+                <a href="{{ url_for('unlock.choose') }}" class="text-sm text-gray-500 hover:text-gray-300"><i class="fas fa-arrow-left mr-1"></i> Other methods</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+let pin = '';
+
+function updateDisplay() {
+    document.querySelectorAll('.pin-dot').forEach((dot, i) => {
+        dot.classList.toggle('filled', i < pin.length);
+    });
+}
+
+function addDigit(d) {
+    if (pin.length >= 6) return;
+    pin += d;
+    updateDisplay();
+    document.getElementById('error-msg').classList.add('hidden');
+
+    if (pin.length >= 4) {
+        clearTimeout(window.submitTimeout);
+        window.submitTimeout = setTimeout(submitPin, 800);
+    }
+}
+
+function deleteDigit() { pin = pin.slice(0, -1); updateDisplay(); }
+function clearPin() { pin = ''; updateDisplay(); }
+
+async function submitPin() {
+    try {
+        const resp = await fetch('{{ url_for("unlock.pin") }}', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ pin: pin })
+        });
+        const data = await resp.json();
+        if (data.success) {
+            showToast(data.message, 'success');
+            setTimeout(() => window.location.href = data.redirect, 1000);
+        } else {
+            showToast(data.message, 'error');
+            document.getElementById('error-msg').textContent = data.message;
+            document.getElementById('error-msg').classList.remove('hidden');
+            pin = '';
+            updateDisplay();
+        }
+    } catch (err) {
+        showToast('Error: ' + err.message, 'error');
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key >= '0' && e.key <= '9') addDigit(e.key);
+    else if (e.key === 'Backspace') deleteDigit();
+});
+</script>
+{% endblock %}

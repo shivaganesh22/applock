@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% block title %}Fingerprint Unlock{% endblock %}
+
+{% block content %}
+<section class="min-h-[calc(100vh-72px)] flex items-center justify-center px-6 py-12">
+    <div class="w-full max-w-md">
+        <div class="glass-card rounded-2xl p-8">
+            <div class="text-center mb-6">
+                <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-emerald-500 to-green-400 rounded-2xl flex items-center justify-center text-2xl">
+                    <i class="fas fa-fingerprint"></i>
+                </div>
+                <h2 class="text-2xl font-bold">Fingerprint Unlock</h2>
+                <p class="text-gray-500 text-sm mt-1">Use your device fingerprint sensor</p>
+            </div>
+
+            <!-- Scanner Animation -->
+            <div class="relative w-48 h-48 mx-auto flex items-center justify-center my-8">
+                <i class="fas fa-fingerprint text-7xl text-emerald-400 z-10"></i>
+                <div class="scan-line"></div>
+                <div class="ring-pulse w-40 h-40"></div>
+                <div class="ring-pulse w-44 h-44" style="animation-delay: 0.5s"></div>
+            </div>
+
+            <p id="fp-status" class="text-center text-sm text-gray-400 mb-6">
+                Click below to authenticate with your fingerprint.
+            </p>
+
+            <button id="auth-btn" onclick="authenticateFingerprint()" class="w-full px-4 py-3.5 bg-gradient-to-r from-emerald-500 to-green-500 rounded-xl text-sm font-semibold text-white hover:opacity-90 transition-all hover:-translate-y-0.5">
+                <i class="fas fa-fingerprint mr-2"></i> Scan Fingerprint
+            </button>
+
+            <div id="success-msg" class="hidden mt-4 flex flex-col items-center gap-3 py-4">
+                <div class="w-16 h-16 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full flex items-center justify-center text-3xl success-bounce">✓</div>
+                <p class="text-emerald-400 font-semibold">Fingerprint Verified!</p>
+            </div>
+
+            <div class="text-center mt-6">
+                <a href="{{ url_for('unlock.choose') }}" class="text-sm text-gray-500 hover:text-gray-300"><i class="fas fa-arrow-left mr-1"></i> Other methods</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+async function authenticateFingerprint() {
+    const btn = document.getElementById('auth-btn');
+    btn.disabled = true;
+    btn.innerHTML = '<div class="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mx-auto"></div>';
+    document.getElementById('fp-status').textContent = 'Requesting auth challenge...';
+
+    try {
+        // 1. Get auth options
+        const optResp = await fetch('{{ url_for("unlock.fingerprint_auth_options") }}', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' }
+        });
+        const options = await optResp.json();
+
+        if (!options.challenge) throw new Error(options.message || 'Failed to get options.');
+
+        options.challenge = new Uint8Array(options.challenge).buffer;
+        options.allowCredentials = options.allowCredentials.map(c => ({
+            ...c, id: new Uint8Array(c.id).buffer
+        }));
+
+        document.getElementById('fp-status').textContent = 'Touch your fingerprint sensor...';
+
+        // 2. Authenticate via WebAuthn
+        const assertion = await navigator.credentials.get({ publicKey: options });
+
+        // 3. Send to server
+        const authData = {
+            credentialId: Array.from(new Uint8Array(assertion.rawId)),
+            response: {
+                authenticatorData: Array.from(new Uint8Array(assertion.response.authenticatorData)),
+                clientDataJSON: Array.from(new Uint8Array(assertion.response.clientDataJSON)),
+                signature: Array.from(new Uint8Array(assertion.response.signature))
+            }
+        };
+
+        const completeResp = await fetch('{{ url_for("unlock.fingerprint_auth_complete") }}', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(authData)
+        });
+        const result = await completeResp.json();
+
+        if (result.success) {
+            showToast(result.message, 'success');
+            btn.classList.add('hidden');
+            document.getElementById('fp-status').textContent = '';
+            document.getElementById('success-msg').classList.remove('hidden');
+            setTimeout(() => window.location.href = result.redirect, 2000);
+        } else {
+            throw new Error(result.message);
+        }
+    } catch (err) {
+        if (err.name === 'NotAllowedError') {
+            showToast('Authentication cancelled.', 'warning');
+        } else {
+            showToast('Auth failed: ' + err.message, 'error');
+        }
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fas fa-fingerprint mr-2"></i> Retry';
+        document.getElementById('fp-status').textContent = 'Tap to retry.';
+    }
+}
+</script>
+{% endblock %}

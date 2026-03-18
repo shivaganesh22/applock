@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<section class="max-w-6xl mx-auto px-6 py-10">
+    <!-- Header -->
+    <div class="flex items-center justify-between flex-wrap gap-4 mb-8">
+        <div>
+            <h1 class="text-3xl font-bold">Security Dashboard</h1>
+            <p class="text-gray-500 mt-1">Welcome back, <span class="text-gray-300 font-medium">{{ user.email }}</span></p>
+        </div>
+        <!-- Security Score -->
+        <div class="flex items-center gap-3 px-5 py-3 bg-white/[0.03] border border-white/[0.08] rounded-2xl">
+            {% set score = (enrolled_count * 20) %}
+            <div class="w-12 h-12 rounded-full border-[3px] flex items-center justify-center font-bold text-sm
+                {% if score >= 80 %}border-emerald-400 text-emerald-400
+                {% elif score >= 40 %}border-amber-400 text-amber-400
+                {% else %}border-red-400 text-red-400{% endif %}">
+                {{ score }}%
+            </div>
+            <div>
+                <div class="text-xs text-gray-500">Security Level</div>
+                <div class="text-sm font-semibold">
+                    {% if score >= 80 %}Excellent
+                    {% elif score >= 60 %}Strong
+                    {% elif score >= 40 %}Moderate
+                    {% else %}Weak{% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Row -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <div class="glass-card rounded-xl p-5 text-center">
+            <div class="text-3xl font-black gradient-text">{{ enrolled_count }}</div>
+            <div class="text-xs text-gray-500 mt-1 font-medium">Methods Active</div>
+        </div>
+        <div class="glass-card rounded-xl p-5 text-center">
+            <div class="text-3xl font-black text-accent-cyan">5</div>
+            <div class="text-xs text-gray-500 mt-1 font-medium">Methods Available</div>
+        </div>
+        <div class="glass-card rounded-xl p-5 text-center">
+            <div class="text-3xl font-black text-accent-green">
+                {{ user.last_login.strftime('%H:%M') if user.last_login else '--:--' }}
+            </div>
+            <div class="text-xs text-gray-500 mt-1 font-medium">Last Login (IST)</div>
+        </div>
+    </div>
+
+    <!-- Methods Grid -->
+    <div class="flex items-center justify-between mb-4">
+        <h2 class="text-xl font-bold">Authentication Methods</h2>
+        <a href="{{ url_for('enroll.hub') }}" class="text-sm text-accent-violet hover:underline font-medium">
+            <i class="fas fa-plus mr-1"></i> Manage Methods
+        </a>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {% for method in methods %}
+        <div class="glass-card rounded-xl p-5 method-card" style="--card-color: {{ method.color }}">
+            <div class="flex items-start justify-between mb-3">
+                <div class="w-12 h-12 rounded-xl flex items-center justify-center text-xl" style="background: {{ method.color }}22; color: {{ method.color }}">
+                    <i class="fas {{ method.icon }}"></i>
+                </div>
+                {% if method.type in ['face', 'gesture'] %}
+                <span class="px-2 py-0.5 bg-accent-violet/15 border border-accent-violet/30 rounded-full text-[10px] font-bold text-accent-violet uppercase tracking-wider">ML</span>
+                {% endif %}
+            </div>
+            <h3 class="font-semibold text-base">{{ method.name }}</h3>
+            <div class="flex items-center gap-1.5 mt-2 text-xs font-medium">
+                {% if method.enrolled %}
+                <i class="fas fa-check-circle text-emerald-400"></i>
+                <span class="text-emerald-400">Enrolled & Active</span>
+                {% else %}
+                <i class="far fa-circle text-gray-600"></i>
+                <span class="text-gray-600">Not Enrolled</span>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

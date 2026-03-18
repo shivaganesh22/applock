@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+{% block title %}Enroll PIN{% endblock %}
+
+{% block content %}
+<section class="min-h-[calc(100vh-72px)] flex items-center justify-center px-6 py-12">
+    <div class="w-full max-w-md">
+        <div class="glass-card rounded-2xl p-8">
+            <div class="text-center mb-6">
+                <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-violet-600 to-purple-400 rounded-2xl flex items-center justify-center text-2xl">
+                    <i class="fas fa-key"></i>
+                </div>
+                <h2 class="text-2xl font-bold">Set Your PIN</h2>
+                <p class="text-gray-500 text-sm mt-1">Enter a 4-6 digit numeric PIN</p>
+            </div>
+
+            <!-- Phase Indicator -->
+            <div id="phase-indicator" class="text-center mb-4">
+                <span class="px-3 py-1 rounded-full bg-accent-violet/15 text-accent-violet text-xs font-semibold">Step 1: Enter PIN</span>
+            </div>
+
+            <!-- PIN Display -->
+            <div id="pin-display" class="flex justify-center gap-3 mb-8">
+                <div class="pin-dot" data-index="0"></div>
+                <div class="pin-dot" data-index="1"></div>
+                <div class="pin-dot" data-index="2"></div>
+                <div class="pin-dot" data-index="3"></div>
+                <div class="pin-dot" data-index="4"></div>
+                <div class="pin-dot" data-index="5"></div>
+            </div>
+
+            <!-- PIN Pad -->
+            <div class="grid grid-cols-3 gap-3 max-w-[276px] mx-auto">
+                <button class="pin-key" onclick="addDigit('1')">1</button>
+                <button class="pin-key" onclick="addDigit('2')">2</button>
+                <button class="pin-key" onclick="addDigit('3')">3</button>
+                <button class="pin-key" onclick="addDigit('4')">4</button>
+                <button class="pin-key" onclick="addDigit('5')">5</button>
+                <button class="pin-key" onclick="addDigit('6')">6</button>
+                <button class="pin-key" onclick="addDigit('7')">7</button>
+                <button class="pin-key" onclick="addDigit('8')">8</button>
+                <button class="pin-key" onclick="addDigit('9')">9</button>
+                <button class="pin-key text-sm text-gray-500" onclick="clearPin()"><i class="fas fa-times"></i></button>
+                <button class="pin-key" onclick="addDigit('0')">0</button>
+                <button class="pin-key text-sm text-red-400" onclick="deleteDigit()"><i class="fas fa-backspace"></i></button>
+            </div>
+
+            <!-- Hidden Form -->
+            <form id="pin-form" method="POST" action="{{ url_for('enroll.pin') }}" class="hidden">
+                <input type="hidden" name="pin" id="pin-input">
+                <input type="hidden" name="confirm_pin" id="confirm-pin-input">
+            </form>
+
+            <div class="text-center mt-6">
+                <a href="{{ url_for('enroll.hub') }}" class="text-sm text-gray-500 hover:text-gray-300"><i class="fas fa-arrow-left mr-1"></i> Back</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+let pin = '';
+let confirmPin = '';
+let phase = 'enter'; // enter or confirm
+
+function updateDisplay() {
+    const dots = document.querySelectorAll('.pin-dot');
+    const currentPin = phase === 'enter' ? pin : confirmPin;
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('filled', i < currentPin.length);
+    });
+}
+
+function addDigit(digit) {
+    const current = phase === 'enter' ? pin : confirmPin;
+    if (current.length >= 6) return;
+
+    if (phase === 'enter') {
+        pin += digit;
+    } else {
+        confirmPin += digit;
+    }
+    updateDisplay();
+
+    // Auto-submit after confirm
+    if (phase === 'confirm' && confirmPin.length >= 4 && confirmPin.length === pin.length) {
+        setTimeout(submitPin, 300);
+    }
+
+    // Auto-advance after enter (when 4+ digits and user pauses)
+    if (phase === 'enter' && pin.length >= 4) {
+        clearTimeout(window.advanceTimeout);
+        window.advanceTimeout = setTimeout(() => {
+            if (phase === 'enter' && pin.length >= 4) {
+                advanceToConfirm();
+            }
+        }, 1000);
+    }
+}
+
+function deleteDigit() {
+    if (phase === 'enter') {
+        pin = pin.slice(0, -1);
+    } else {
+        confirmPin = confirmPin.slice(0, -1);
+    }
+    updateDisplay();
+}
+
+function clearPin() {
+    if (phase === 'enter') {
+        pin = '';
+    } else {
+        confirmPin = '';
+    }
+    updateDisplay();
+}
+
+function advanceToConfirm() {
+    phase = 'confirm';
+    document.getElementById('phase-indicator').innerHTML =
+        '<span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-400 text-xs font-semibold">Step 2: Confirm PIN</span>';
+    updateDisplay();
+}
+
+function submitPin() {
+    if (pin !== confirmPin) {
+        showToast('PINs do not match. Try again.', 'error');
+        confirmPin = '';
+        phase = 'confirm';
+        updateDisplay();
+        return;
+    }
+    document.getElementById('pin-input').value = pin;
+    document.getElementById('confirm-pin-input').value = confirmPin;
+    document.getElementById('pin-form').submit();
+}
+
+// Allow keyboard input
+document.addEventListener('keydown', (e) => {
+    if (e.key >= '0' && e.key <= '9') addDigit(e.key);
+    else if (e.key === 'Backspace') deleteDigit();
+    else if (e.key === 'Enter' && phase === 'enter' && pin.length >= 4) advanceToConfirm();
+});
+</script>
+{% endblock %}

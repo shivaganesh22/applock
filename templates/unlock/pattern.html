@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+{% block title %}Pattern Unlock{% endblock %}
+
+{% block content %}
+<section class="min-h-[calc(100vh-72px)] flex items-center justify-center px-6 py-12">
+    <div class="w-full max-w-md">
+        <div class="glass-card rounded-2xl p-8">
+            <div class="text-center mb-6">
+                <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-cyan-500 to-teal-400 rounded-2xl flex items-center justify-center text-2xl">
+                    <i class="fas fa-th"></i>
+                </div>
+                <h2 class="text-2xl font-bold">Draw Pattern</h2>
+                <p class="text-gray-500 text-sm mt-1">Draw your pattern to unlock</p>
+            </div>
+
+            <div id="error-msg" class="hidden text-center text-red-400 text-sm mb-4"></div>
+
+            <div class="flex justify-center">
+                <div class="pattern-grid">
+                    <canvas id="pattern-canvas" class="pattern-canvas" width="280" height="280"></canvas>
+                    <div class="pattern-dots">
+                        {% for i in range(9) %}
+                        <div class="flex items-center justify-center">
+                            <div class="pattern-dot-inner" data-index="{{ i }}"></div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <button onclick="clearPattern()" class="w-full mt-4 px-4 py-2.5 bg-white/[0.05] border border-white/[0.08] rounded-lg text-sm font-medium text-gray-300 hover:bg-white/[0.08] transition-all">
+                <i class="fas fa-redo mr-1"></i> Clear
+            </button>
+
+            <div class="text-center mt-6">
+                <a href="{{ url_for('unlock.choose') }}" class="text-sm text-gray-500 hover:text-gray-300"><i class="fas fa-arrow-left mr-1"></i> Other methods</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const canvas = document.getElementById('pattern-canvas');
+const ctx = canvas.getContext('2d');
+let pattern = [];
+let isDrawing = false;
+
+const dots = [];
+for (let row = 0; row < 3; row++) {
+    for (let col = 0; col < 3; col++) {
+        dots.push({ x: col * 93.33 + 46.67, y: row * 93.33 + 46.67, index: row * 3 + col });
+    }
+}
+
+function getMousePos(e) {
+    const rect = canvas.getBoundingClientRect();
+    const sx = canvas.width / rect.width, sy = canvas.height / rect.height;
+    const cx = e.touches ? e.touches[0].clientX : e.clientX;
+    const cy = e.touches ? e.touches[0].clientY : e.clientY;
+    return { x: (cx - rect.left) * sx, y: (cy - rect.top) * sy };
+}
+
+function getNearestDot(pos) {
+    for (const d of dots) {
+        if (Math.sqrt((pos.x - d.x) ** 2 + (pos.y - d.y) ** 2) < 35) return d;
+    }
+    return null;
+}
+
+function draw(mousePos) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    if (pattern.length === 0) return;
+    ctx.strokeStyle = '#06b6d4';
+    ctx.lineWidth = 3;
+    ctx.lineCap = 'round';
+    ctx.shadowBlur = 10;
+    ctx.shadowColor = '#06b6d4';
+    ctx.beginPath();
+    ctx.moveTo(dots[pattern[0]].x, dots[pattern[0]].y);
+    for (let i = 1; i < pattern.length; i++) ctx.lineTo(dots[pattern[i]].x, dots[pattern[i]].y);
+    if (mousePos && isDrawing) ctx.lineTo(mousePos.x, mousePos.y);
+    ctx.stroke();
+    ctx.shadowBlur = 0;
+    document.querySelectorAll('.pattern-dot-inner').forEach((d, i) => d.classList.toggle('active', pattern.includes(i)));
+}
+
+canvas.addEventListener('mousedown', (e) => { isDrawing = true; checkDot(e); });
+canvas.addEventListener('mousemove', (e) => { if (isDrawing) { checkDot(e); draw(getMousePos(e)); } });
+canvas.addEventListener('mouseup', () => endDraw());
+canvas.addEventListener('touchstart', (e) => { e.preventDefault(); isDrawing = true; checkDot(e); });
+canvas.addEventListener('touchmove', (e) => { e.preventDefault(); if (isDrawing) { checkDot(e); draw(getMousePos(e)); } });
+canvas.addEventListener('touchend', () => endDraw());
+
+function checkDot(e) {
+    const dot = getNearestDot(getMousePos(e));
+    if (dot && !pattern.includes(dot.index)) { pattern.push(dot.index); draw(null); }
+}
+
+function endDraw() {
+    isDrawing = false;
+    draw(null);
+    if (pattern.length >= 4) submitPattern();
+}
+
+async function submitPattern() {
+    try {
+        const resp = await fetch('{{ url_for("unlock.pattern") }}', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ pattern: pattern })
+        });
+        const data = await resp.json();
+        if (data.success) {
+            showToast(data.message, 'success');
+            setTimeout(() => window.location.href = data.redirect, 1000);
+        } else {
+            showToast(data.message, 'error');
+            document.getElementById('error-msg').textContent = data.message;
+            document.getElementById('error-msg').classList.remove('hidden');
+            clearPattern();
+        }
+    } catch (err) {
+        showToast('Error: ' + err.message, 'error');
+    }
+}
+
+function clearPattern() {
+    pattern = [];
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    document.querySelectorAll('.pattern-dot-inner').forEach(d => d.classList.remove('active'));
+}
+</script>
+{% endblock %}
